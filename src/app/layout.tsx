@@ -18,6 +18,9 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Cocogum | Teknologi Perekat Organik Industri",
   description: "Pelopor teknologi pengikat organik industri untuk masa depan manufaktur yang berkelanjutan.",
+  icons: {
+    icon: "/logo-cocogum.webp",
+  },
 };
 
 export default function RootLayout({
