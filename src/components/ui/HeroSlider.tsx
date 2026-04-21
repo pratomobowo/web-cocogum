@@ -90,7 +90,7 @@ export default function HeroSlider() {
                <Image
                  src={data.bgImage}
                  fill
-                 className={`object-cover opacity-50 grayscale-[20%] transition-transform duration-[8000ms] ease-out will-change-transform ${idx === currentIdx ? "scale-105" : "scale-100"}`}
+                 className="object-cover opacity-50"
                  alt={data.title}
                  priority={idx === 0}
                  sizes="100vw"
