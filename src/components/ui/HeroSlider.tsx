@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const sliderData = [
@@ -76,9 +77,9 @@ export default function HeroSlider() {
       
       {/* Slider Track Horizontal */}
       <div 
-        className="flex w-full h-full"
+        className="flex w-full h-full will-change-transform"
         style={{ 
-           transform: `translateX(-${currentIdx * 100}%)`,
+           transform: `translateX(-${currentIdx * 100}%) translateZ(0)`,
            transition: "transform 1.8s cubic-bezier(0.77, 0, 0.175, 1)"
         }}
       >
@@ -86,10 +87,13 @@ export default function HeroSlider() {
           <div key={data.id} className="relative w-full h-full flex-shrink-0 group/slide">
             {/* Background Image per slide dengan overlay Hitam Elegan */}
             <div className="absolute inset-0 bg-black z-0 overflow-hidden">
-               <img
+               <Image
                  src={data.bgImage}
-                 className={`w-full h-full object-cover opacity-50 grayscale-[20%] transition-transform duration-[8000ms] ease-out ${idx === currentIdx ? "scale-105" : "scale-100"}`}
+                 fill
+                 className={`object-cover opacity-50 grayscale-[20%] transition-transform duration-[8000ms] ease-out will-change-transform ${idx === currentIdx ? "scale-105" : "scale-100"}`}
                  alt={data.title}
+                 priority={idx === 0}
+                 sizes="100vw"
                />
                <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
                <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-80"></div>
