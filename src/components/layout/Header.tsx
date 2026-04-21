@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Header() {
   const pathname = usePathname();
@@ -42,12 +43,16 @@ export default function Header() {
         <nav className="flex justify-between items-center w-full px-6 lg:px-8 py-4 max-w-[1400px] mx-auto">
           
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-2 group z-[60]">
-            <div className="bg-primary text-white p-1.5 rounded relative overflow-hidden transition-transform group-hover:scale-105">
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:-translate-y-full transition-transform duration-500 ease-in-out"></div>
-              <span className="material-symbols-outlined text-xl leading-none">blur_on</span>
-            </div>
-            <span className="text-2xl font-bold font-headline tracking-tighter text-on-surface">
+          <Link href="/" className="flex items-center gap-1.5 group z-[60]">
+            <Image 
+              src="/logo-cocogum.webp" 
+              alt="Cocogum Logo" 
+              width={40} 
+              height={40} 
+              className="h-8 w-auto object-contain transition-transform group-hover:scale-105"
+              priority
+            />
+            <span className="text-2xl font-bold font-headline tracking-tighter text-on-surface uppercase">
               Cocogum<span className="text-primary text-3xl leading-none">.</span>
             </span>
           </Link>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -9,7 +10,16 @@ export default function Footer() {
       
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
         <div className="col-span-1 md:col-span-1">
-          <div className="text-2xl font-headline font-black text-white mb-6 tracking-tight">Cocogum<span className="text-surface-tint">.</span></div>
+          <div className="flex items-center gap-1.5 mb-6">
+            <Image 
+              src="/logo-cocogum.webp" 
+              alt="Cocogum Logo" 
+              width={40} 
+              height={40} 
+              className="h-9 w-auto object-contain brightness-0 invert" 
+            />
+            <div className="text-2xl font-headline font-bold text-white tracking-tight uppercase">Cocogum<span className="text-surface-tint">.</span></div>
+          </div>
           <p className="text-white/70 text-sm leading-relaxed">
             Pelopor teknologi pengikat polimer terdepan untuk masa depan manufaktur yang berkelanjutan. Engineering the Organic Foundry.
           </p>
