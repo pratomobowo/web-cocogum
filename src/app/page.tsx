@@ -110,9 +110,9 @@ export default function Home() {
             <div className="md:col-span-4 bg-surface-container-high rounded-xl p-8 flex flex-col justify-between hover:bg-primary hover:text-white transition-all group border border-transparent shadow-sm">
               <div>
                 <span className="material-symbols-outlined text-4xl text-primary group-hover:text-primary-fixed">forest</span>
-                <h3 className="font-headline font-bold text-3xl mt-6">Briq</h3>
-                <p className="text-on-surface-variant group-hover:text-emerald-200/70 mt-3 font-medium">Briket Biomassa & Energi</p>
-                <p className="text-sm mt-3 text-on-surface-variant group-hover:text-white/70">Pengikat nilai kalor tinggi tanpa pelepasan asap, kelas ekspor premium.</p>
+                <h3 className="font-headline font-bold text-3xl mt-6">Cocogum BRIQ</h3>
+                <p className="text-on-surface-variant group-hover:text-emerald-200/70 mt-3 font-medium">Perekat Briket Kelas Ekspor</p>
+                <p className="text-sm mt-3 text-on-surface-variant group-hover:text-white/70">Pangkas waktu oven hingga 50%, tanpa asap, pertahankan 95% fixed carbon untuk standarisasi tinggi.</p>
               </div>
               <div className="mt-8">
                 <a className="font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/produk">Investigasi <span className="material-symbols-outlined">chevron_right</span></a>
@@ -128,9 +128,9 @@ export default function Home() {
               <div className="relative z-10 max-w-md h-full flex flex-col justify-between">
                 <div>
                   <span className="material-symbols-outlined text-4xl text-primary bg-primary/10 p-2 rounded">factory</span>
-                  <h3 className="font-headline font-bold text-4xl mt-6 text-on-surface">Batubara Filtrasi</h3>
-                  <p className="text-primary font-bold mt-2">Daya Adsorpsi & Purifikasi Maksimal</p>
-                  <p className="text-on-surface-variant mt-4 leading-relaxed">Rekayasa penekanan debu untuk fasilitas pertambangan hingga penyempurnaan mikroporositas karbon aktif pengolahan air kritis dengan jejak *chemical* nyaris nihil.</p>
+                  <h3 className="font-headline font-bold text-4xl mt-6 text-on-surface">Cocogum COAL</h3>
+                  <p className="text-primary font-bold mt-2">Tambang &amp; Lingkungan</p>
+                  <p className="text-on-surface-variant mt-4 leading-relaxed">Ubah coal fines (debu batubara) menjadi aset briket energi kalori tinggi. Kurangi limbah dan penuhi standar keberlanjutan ESG.</p>
                 </div>
                 <div className="mt-8">
                   <a className="text-primary bg-primary/5 px-6 py-3 rounded inline-flex font-bold items-center gap-2 hover:bg-primary hover:text-white transition-all" href="/produk">Eksplorasi Lingkungan <span className="material-symbols-outlined">arrow_forward</span></a>
@@ -145,40 +145,15 @@ export default function Home() {
               </div>
               <div className="relative z-10">
                 <span className="material-symbols-outlined text-4xl text-primary-fixed">grass</span>
-                <h3 className="font-headline font-bold text-3xl mt-6">Pakan (Feed)</h3>
-                <p className="text-primary-fixed font-medium mt-2">Agro & Akuakultur Industri</p>
-                <p className="text-emerald-200/80 mt-3 text-sm leading-relaxed">Pengikat pelet bernutrisi adaptif tanpa retak untuk minimalisir limbah keropos saat distribusi pakan ternak.</p>
+                <h3 className="font-headline font-bold text-3xl mt-6">Cocogum FEED</h3>
+                <p className="text-primary-fixed font-medium mt-2">Pakan Ternak &amp; Akuakultur</p>
+                <p className="text-emerald-200/80 mt-3 text-sm leading-relaxed">Durabilitas tinggi di air tanpa hancur. Minimalisir food waste, 100% organik dan aman dikonsumsi dengan formulasi minim debu.</p>
               </div>
               <div className="mt-8 relative z-10">
                 <a className="font-bold flex items-center gap-2 text-primary-fixed hover:text-white transition-colors" href="/produk">Spek Nutrisi <span className="material-symbols-outlined">arrow_forward</span></a>
               </div>
             </div>
 
-            {/* Mosq */}
-            <div className="md:col-span-4 bg-surface-container-high rounded-xl p-8 flex flex-col justify-between group border border-transparent shadow-sm">
-              <div>
-                <span className="material-symbols-outlined text-4xl text-primary">pest_control</span>
-                <h3 className="font-headline font-bold text-3xl mt-6 text-on-surface">Mosq</h3>
-                <p className="text-primary font-medium mt-2">Perlindungan Rital</p>
-                <p className="text-on-surface-variant mt-3 text-sm">Pengontrol pelemahan nyamuk ekologis. Pembakaran bersih dan pelepasan senyawa stabil jangka panjang tanpa racun paru-paru buatan.</p>
-              </div>
-              <div className="mt-8">
-                <a className="font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/produk">Data Klinis <span className="material-symbols-outlined">arrow_forward</span></a>
-              </div>
-            </div>
-
-            {/* Agro */}
-            <div className="md:col-span-4 bg-surface-container-lowest border border-outline-variant/10 rounded-xl p-8 flex flex-col justify-between group hover:border-primary shadow-sm hover:shadow-lg transition-all">
-              <div>
-                <span className="material-symbols-outlined text-4xl text-primary bg-primary/5 p-2 rounded">agriculture</span>
-                <h3 className="font-headline font-bold text-3xl mt-6 text-on-surface">Agro-Substrat</h3>
-                <p className="text-primary font-medium mt-2">Kondisioner Pertanian</p>
-                <p className="text-on-surface-variant mt-3 text-sm">Media hortikultur presisi tinggi. Mengelola aerasi dan retensi cadangan nutrisi pengikat lepas lambat (slow-release fertilizers) untuk kebun pintar.</p>
-              </div>
-              <div className="mt-8">
-                <a className="font-bold text-primary flex items-center gap-2 group-hover:gap-4 transition-all" href="/produk">Sistem Tanam <span className="material-symbols-outlined">arrow_forward</span></a>
-              </div>
-            </div>
           </div>
         </div>
       </section>

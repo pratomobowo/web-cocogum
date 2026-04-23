@@ -35,26 +35,6 @@ const sliderData = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBtRua1vEdWz65dVnwVJiUFp4rqUmMkUs5bGW1PAYTilz3bzRCw9IhpYTe-w9O8YuOFIDqxSC3nimXwskkJmbLd6YTMOPCokl78HJNpysipbkk22GE6r7wuDGkJVpIIWuIu4WaWCSQsepKp2f4ljWnO25XhbGPaVMcvvV5-o9MKsCUceT5uzyo5RoanP4U1G7opMGULCXyVtjJjs74S1A1lPoznK1wQKzqXyStk96vRSyvDIJ7lCNsRdCUhifXWg1d65_2idiUG2F0",
     linkUrl: "/produk",
   },
-  {
-    id: "mosq",
-    title: "Resin Proteksi Udara",
-    tagline: "Vertikal Mosq",
-    description:
-      "Medium perlindungan nyamuk bakar bersih emisi. Terarsitektur agar memperlambat titik penguapan senyama aktif.",
-    bgImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB08ETZXHq_eK4SKR1QQPs-rdcKCle7KVS7izBoqzAb6jjq7K9aB1L6St2PflCDRbhakZ49RUJduZIooWaJI9FAK9eZJvfwNKhsJHKhEP_Xqa65SIjf3QdYWa1x6gvADQrVv6VamEvNMRNLhYXKP_CvUrhTjLnxj6DqlF-pZp7G6EOUbYBzhVBtmBsaWkSgvC02DVMwA75LwvWRYxcv6nIEQsXsDIhDMvvywKhd71a0uazOw4MRuxidL5jLbNHIPvhqDfhm5I50u00",
-    linkUrl: "/produk",
-  },
-  {
-    id: "agro",
-    title: "Substrat Cerdas",
-    tagline: "Vertikal Hortikultura",
-    description:
-      "Modulator hidrasi bertahap. Rekayasa gambut (peat) terstandar karantina nabati untuk manajemen air radikal.",
-    bgImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC6c4A2Nd0fNgQzZLoiEk0FOebuc3TMQSzU8YBow1rRZUJImcApGCUU0GOOA8c0UOnArvfKJrtxcsQ_dLOcQDwd9eLAg7W4CV2tojDxzqkC2_nXnxO4OrcSa2-eSB7iKWUPS46bn_1aTfmrcxsoKxWYqyHW9E_WCze-YqFZrKNHs2PzyGK3406PLBhGYTQ-KDSyHUVOTsAbaqXmUIo4wBItg2BqPBOa8yAo7_Truh45yUnICjJaeP2rv2CQ0lyccouiUGIvMI2pirI",
-    linkUrl: "/produk",
-  },
 ];
 
 export default function HeroSlider() {

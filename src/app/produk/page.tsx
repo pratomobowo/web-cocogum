@@ -62,21 +62,14 @@ export default function Produk() {
         <div className="max-w-7xl mx-auto px-8 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-5/12">
-              <span className="text-primary font-bold tracking-widest text-sm uppercase">VERTIKAL 01: ENERGI (BIOMASSA)</span>
-              <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">Briq: Perekat Briket Kelas Atas</h2>
-              <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
-                Dioptimalkan untuk pasar kuliner profesional (HORECA) dan manufaktur pemanas boiler industri. Perekat briket arang briq menjanjikan retensi tegangan termal hingga derajat maksimum tanpa residu pelepasan kimia. <span className="font-bold text-primary italic">Kualitas Ekspor Unggulan.</span>
+              <span className="text-primary font-bold tracking-widest text-sm uppercase">Perekat Briket Kelas Ekspor — Organik. Terverifikasi. Efisien.</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">Pangkas Waktu Oven Hingga 50%. Tanpa Asap. Tanpa Kompromi Kualitas.</h2>
+              <p className="font-bold text-primary mb-4 text-lg">
+                Cocogum BRIQ hanya membutuhkan 1/3 hingga 1/4 jumlah perekat dibanding binder konvensional (tapioka, dsb.) untuk kekuatan ikatan yang setara atau lebih baik.
               </p>
-              <ul className="space-y-4 mb-10 text-on-surface-variant">
-                <li className="flex gap-4 items-start">
-                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
-                  <span><strong>Pembakaran Nir-Asap (Smokeless):</strong> Menjaga kemurnian karbon saat terpapar api (95% Fixed Carbon support).</span>
-                </li>
-                <li className="flex gap-4 items-start">
-                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
-                  <span><strong>Kepadatan Ekstrem:</strong> Tekanan internal (<em>crushing strength</em>) unggul untuk mencegah pecah pelabuhan.</span>
-                </li>
-              </ul>
+              <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                Cocogum BRIQ adalah perekat organik yang diformulasikan khusus untuk pabrik briket arang batok kelapa orientasi ekspor — mempercepat siklus produksi, mempertahankan 95% fixed carbon, dan menghasilkan briket yang lulus uji standar pasar Shisha internasional.
+              </p>
               <button className="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-container hover:-translate-y-1 transition-all flex items-center shadow-lg gap-3">
                 Inquiry Sektor Briket <span className="material-symbols-outlined text-xl">arrow_forward</span>
               </button>
@@ -97,21 +90,21 @@ export default function Produk() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest rounded-3xl p-8 lg:p-16 border border-outline-variant/20 shadow-2xl overflow-hidden relative">
             <div className="grain-texture absolute inset-0 opacity-30"></div>
             <div className="lg:col-span-8 relative z-10 lg:pr-12">
-              <span className="text-primary font-bold tracking-widest text-sm uppercase">VERTIKAL 02: PENAMBANGAN & LINGKUNGAN</span>
-              <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">Coal: Karbon Aktif & Penekan Debu</h2>
+              <span className="text-primary font-bold tracking-widest text-sm uppercase">Cocogum COAL — Tambang &amp; Lingkungan</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">Zero Waste Mining: Mengubah Limbah Batubara Menjadi Aset Energi</h2>
               <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
-                Diaplikasikan pada fasilitas pengolahan batu bara basah/kering. Cocogum memunculkan mikroporositas tingkat lanjut dan luas permukaan spesifik untuk arang adsorpsi tingkat kimia yang kuat. Berfungsi ganda secara efektif sebagai bahan pelapis jalur angkut rel (*anti-dust suppressant*).
+                Menekankan pemulihan nilai ekonomi dari <em>coal fines</em> menjadi briket energi tinggi yang bernilai jual untuk Perusahaan Tambang Batubara, PLTU, dan Industri Boiler Batubara.
               </p>
-              <div className="grid grid-cols-2 gap-8 mb-10">
-                <div className="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
-                  <h4 className="font-bold text-primary mb-2 text-xl font-headline">Iodine Value Maksimal</h4>
-                  <p className="text-on-surface-variant text-sm">Menjaga kemurnian adsorpsi bahan VOC pada proses filtrasi industri.</p>
-                </div>
-                <div className="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
-                  <h4 className="font-bold text-primary mb-2 text-xl font-headline">Penekan Debu Silika</h4>
-                  <p className="text-on-surface-variant text-sm">Mengaglomerasi partikel butiran halus (&lt; 5 micron) untuk keselamatan di jalur pelabuhan bongkar muat.</p>
-                </div>
-              </div>
+              <ul className="space-y-4 mb-10 text-on-surface-variant">
+                <li className="flex gap-4 items-start">
+                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
+                  <span><strong>Kalori Tinggi:</strong> Rekatkan debu batubara jadi briket solid bernilai kalori tinggi tanpa menurunkan nilai kalori asli batubara.</span>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
+                  <span><strong>Kepatuhan Lingkungan:</strong> Bantu perusahaan penuhi standar ESG dengan mereduksi limbah emisi tambang.</span>
+                </li>
+              </ul>
               <button className="bg-primary text-white border-2 border-primary hover:bg-surface-container-lowest hover:text-primary px-8 py-4 rounded-lg font-bold transition-all flex items-center shadow-lg gap-3">
                 Spesifikasi MSDS Karbon Aktif <span className="material-symbols-outlined text-xl">download</span>
               </button>
@@ -128,23 +121,25 @@ export default function Produk() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col lg:flex-row-reverse gap-16 items-center">
             <div className="w-full lg:w-5/12">
-              <span className="text-primary font-bold tracking-widest text-sm uppercase">VERTIKAL 03: AKUAKULTUR INDUSTRI</span>
-              <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">Feed: Pengikat Pelet Bio-Nutrisi</h2>
+              <span className="text-primary font-bold tracking-widest text-sm uppercase">Cocogum FEED — Pakan Ternak &amp; Akuakultur</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">Nutrisi Terjaga: Durabilitas &amp; Stabilitas Air untuk Pakan Ternak</h2>
               <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
-                Rekan fungsional industri pakan peternakan canggih. Menghadirkan jaminan ketahanan tinggi di air (*water-stability 4+ hours*) untuk mencegah degradasi kolam perikanan sembari mengunci protein utama tanpa menyebabkan intervensi anti-nutrisi gizi pencernaan.
+                Menonjolkan kemampuan perekat menjaga keutuhan pelet pakan di air — krusial untuk Produsen Pakan Ikan, Pabrik Pakan Udang, serta Feedmill Unggas Skala Menengah-Besar.
               </p>
-              <div className="grid grid-cols-2 gap-4 mb-10">
-                <div className="bg-surface-container-lowest border border-outline-variant/20 p-5 rounded-lg shadow-sm">
-                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-1 block">EFISIENSI BIAYA</span>
-                  <p className="text-primary font-bold text-lg font-headline">FCR (Feed) Terjaga</p>
-                  <p className="text-xs text-on-surface-variant mt-2">Dosis serapan hanya 1-2% volume.</p>
-                </div>
-                <div className="bg-surface-container-lowest border border-outline-variant/20 p-5 rounded-lg shadow-sm">
-                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-1 block">KAMPU-CERNA</span>
-                  <p className="text-primary font-bold text-lg font-headline">Toksisitas Nol Absolut</p>
-                  <p className="text-xs text-on-surface-variant mt-2">Aman dicerna segala biotik ikan tropis.</p>
-                </div>
-              </div>
+              <ul className="space-y-4 mb-10 text-on-surface-variant">
+                <li className="flex gap-4 items-start">
+                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
+                  <span><strong>Durabilitas Air Tinggi:</strong> Pelet tidak hancur di air, secara signifikan mengurangi food waste dalam lingkungan tambak.</span>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
+                  <span><strong>Toksisitas Nol Absolut:</strong> 100% organik dan aman dikonsumsi berbagai komoditas perikanan dan unggas.</span>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
+                  <span><strong>Minim Debu:</strong> Efisiensi penanganan, minim debu pakan saat distribusi dan pembagian (feeding).</span>
+                </li>
+              </ul>
               <button className="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-container transition-all flex items-center shadow-lg gap-3">
                 Inquiry Sektor Akuakultur <span className="material-symbols-outlined text-xl">arrow_forward</span>
               </button>
@@ -159,63 +154,6 @@ export default function Produk() {
         </div>
       </section>
 
-      {/* Expanded Verticals 04 & 05 (Mosq & Agro) Full Width Treatments */}
-      {/* Mosq */}
-      <section className="py-24 bg-surface overflow-hidden">
-        <div className="max-w-7xl mx-auto px-8 relative">
-           <div className="flex flex-col lg:flex-row gap-16 items-center">
-             <div className="w-full lg:w-1/2">
-                <span className="text-primary font-bold tracking-widest text-sm uppercase">VERTIKAL 04: TEKNOLOGI PENGENDALIAN NYAMUK</span>
-                <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">Mosq: Resin Perlindungan Presisi</h2>
-                <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
-                  Ekstraksi bubuk nabati canggih yang diformulasikan sebagai media pemampad (*slow-burning base*) industri anti nyamuk bakar (mosquito repllent coils). 
-                </p>
-                <div className="p-6 bg-surface-container-low border-l-[4px] border-primary mb-8 text-on-surface-variant text-sm">
-                  <strong className="text-primary font-bold">Kualitas Ruang Bakar Cemerlang:</strong> Menyerap dan melepaskan senyawa penolak d-allethrin ke udara secara rata <strong>tanpa letupan patahan koil tengah</strong>. Menghasilkan karakteristik pembakaran karbon-mini (karbon lebih rendah) bagi perlindungan pernafasan balita jangka panjang.
-                </div>
-                <a href="/hubungi" className="text-primary font-bold border-b-2 border-primary pb-1 hover:text-surface-tint inline-flex gap-2">Data Toksikologi Klinis <span className="material-symbols-outlined text-sm pt-0.5">open_in_new</span></a>
-             </div>
-             <div className="w-full lg:w-1/2 relative h-96">
-                {/* Image layout overlap */}
-                <div className="absolute right-0 top-0 w-4/5 h-full rounded-2xl overflow-hidden shadow-2xl">
-                   <img alt="Perlindungan Nyamuk" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB08ETZXHq_eK4SKR1QQPs-rdcKCle7KVS7izBoqzAb6jjq7K9aB1L6St2PflCDRbhakZ49RUJduZIooWaJI9FAK9eZJvfwNKhsJHKhEP_Xqa65SIjf3QdYWa1x6gvADQrVv6VamEvNMRNLhYXKP_CvUrhTjLnxj6DqlF-pZp7G6EOUbYBzhVBtmBsaWkSgvC02DVMwA75LwvWRYxcv6nIEQsXsDIhDMvvywKhd71a0uazOw4MRuxidL5jLbNHIPvhqDfhm5I50u00" />
-                </div>
-                <div className="absolute left-0 bottom-12 w-2/5 p-6 bg-primary text-white rounded-xl shadow-2xl">
-                  <span className="material-symbols-outlined text-3xl mb-2 text-primary-fixed">timer</span>
-                  <p className="font-bold text-lg leading-tight">Burn-rate Konstan (8 Jam)</p>
-                </div>
-             </div>
-           </div>
-        </div>
-      </section>
-
-      {/* Agro */}
-      <section className="py-24 bg-surface-container-lowest border-t border-outline-variant/10">
-        <div className="max-w-7xl mx-auto px-8">
-           <div className="flex flex-col lg:flex-row-reverse gap-16 items-center">
-             <div className="w-full lg:w-1/2">
-                <span className="text-primary font-bold tracking-widest text-sm uppercase">VERTIKAL 05: SMART HORTICULTURE</span>
-                <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">Agro: Substrat Media Sirkular</h2>
-                <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
-                  Binder hortikultural yang direkayasa khusus demi menjaga tingkat *shrinkage* tanah dan retensi kapiler air ekstrem. Solusi primer bagi agrobotani *hydroponic*, pemantap kelembapan (soil conditioner), serta penahan nutrisi matriks pupuk kompresi (slow-release blocks).
-                </p>
-                <div className="flex flex-wrap gap-4 mb-8">
-                  <span className="px-5 py-3 bg-surface-container-highest text-sm font-bold rounded-lg text-primary">Substrat Peat Moss Netral</span>
-                  <span className="px-5 py-3 bg-surface-container-highest text-sm font-bold rounded-lg text-primary">Ekspansi Porositas 200%</span>
-                  <span className="px-5 py-3 bg-primary text-white text-sm font-bold rounded-lg shadow-md">ISO Phytosanitary Karantina</span>
-                </div>
-                <a href="/hubungi" className="bg-white border-2 border-primary text-primary px-8 py-4 rounded-lg font-bold transition-all hover:bg-primary hover:text-white flex items-center shadow-sm w-fit gap-3">
-                  Evolusi Lahan Penanaman <span className="material-symbols-outlined text-xl">psychiatry</span>
-                </a>
-             </div>
-             <div className="w-full lg:w-1/2 relative h-96">
-                <div className="absolute left-0 top-0 w-full h-full rounded-2xl overflow-hidden shadow-2xl">
-                   <img alt="Substrat Agro" className="w-full h-full object-cover opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6c4A2Nd0fNgQzZLoiEk0FOebuc3TMQSzU8YBow1rRZUJImcApGCUU0GOOA8c0UOnArvfKJrtxcsQ_dLOcQDwd9eLAg7W4CV2tojDxzqkC2_nXnxO4OrcSa2-eSB7iKWUPS46bn_1aTfmrcxsoKxWYqyHW9E_WCze-YqFZrKNHs2PzyGK3406PLBhGYTQ-KDSyHUVOTsAbaqXmUIo4wBItg2BqPBOa8yAo7_Truh45yUnICjJaeP2rv2CQ0lyccouiUGIvMI2pirI" />
-                </div>
-             </div>
-           </div>
-        </div>
-      </section>
 
       {/* NEW: Standar Spesifikasi Mutu (QA Table) */}
       <section className="py-24 bg-surface-container-low">

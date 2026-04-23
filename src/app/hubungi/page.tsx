@@ -23,37 +23,49 @@ export default function HubungiKami() {
           
           {/* Left Col: Contact Info & Map */}
           <div className="lg:col-span-5">
-            <h2 className="text-4xl font-bold font-headline text-primary mb-8">Infrastruktur Global</h2>
+            <h2 className="text-4xl font-bold font-headline text-primary mb-8">Hubungi Kami</h2>
             <div className="space-y-10">
               <div className="flex items-start gap-6">
-                <div className="bg-secondary-container p-3 rounded-lg text-primary">
+                <div className="bg-secondary-container p-3 rounded-lg text-primary flex-shrink-0">
                   <span className="material-symbols-outlined">location_on</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary mb-1">Pusat Riset &amp; HQ</h4>
+                  <h4 className="font-bold text-primary mb-1">Kantor Pusat</h4>
                   <p className="text-on-surface-variant leading-relaxed">
-                    88 Industrial Drive, Suite 400<br />
-                    Tech Corridor, Singapura 138623
+                    Jl. Jaksanaranata No. 27, Baleendah,<br />
+                    Kab. Bandung, Jawa Barat 40375.
                   </p>
                 </div>
               </div>
+              
               <div className="flex items-start gap-6">
-                <div className="bg-secondary-container p-3 rounded-lg text-primary">
+                <div className="bg-secondary-container p-3 rounded-lg text-primary flex-shrink-0">
+                  <span className="material-symbols-outlined">person</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary mb-1">Kontak Person</h4>
+                  <p className="text-on-surface-variant leading-relaxed mb-4">
+                    <strong className="text-primary font-bold">Novy Larasati</strong><br />
+                    <span className="text-sm">Secretary Manager</span><br />
+                    <a href="tel:+6285933885" className="hover:text-primary transition-colors">+62 859-33885</a>
+                  </p>
+                  <p className="text-on-surface-variant leading-relaxed">
+                    <strong className="text-primary font-bold">Krisna Jembawan</strong><br />
+                    <span className="text-sm">Business Development Manager</span><br />
+                    <a href="tel:+6285117261988" className="hover:text-primary transition-colors">+62 851-1726-1988</a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6">
+                <div className="bg-secondary-container p-3 rounded-lg text-primary flex-shrink-0">
                   <span className="material-symbols-outlined">mail</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary mb-1">Pertanyaan Teknis</h4>
-                  <p className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">partnerships@cocogum.com</p>
-                  <p className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">technical-support@cocogum.com</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-6">
-                <div className="bg-secondary-container p-3 rounded-lg text-primary">
-                  <span className="material-symbols-outlined">call</span>
-                </div>
-                <div>
-                  <h4 className="font-bold text-primary mb-1">Saluran Langsung</h4>
-                  <p className="text-on-surface-variant">+65 6789 0123</p>
+                  <h4 className="font-bold text-primary mb-1">Email</h4>
+                  <p className="text-on-surface-variant hover:text-primary transition-colors">
+                    <a href="mailto:pelanginalfaabadi@gmail.com">pelanginalfaabadi@gmail.com</a>
+                  </p>
                 </div>
               </div>
             </div>

@@ -43,15 +43,15 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="font-bold text-white/90 mb-6 uppercase tracking-widest text-xs">Kantor Pusat Tersindikasi</h4>
+          <h4 className="font-bold text-white/90 mb-6 uppercase tracking-widest text-xs">Kantor Pusat</h4>
           <p className="text-white/60 text-sm mb-4 leading-relaxed">
-            Distrik Logistik Sentral<br />
-            Jakarta, Indonesia
+            Jl. Jaksanaranata No. 27, Baleendah<br />
+            Kab. Bandung, Jawa Barat 40375.
           </p>
           <div className="flex gap-4 mt-6">
-            <span className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">language</span>
-            <span className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">hub</span>
-            <span className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">mail</span>
+            <a href="mailto:pelanginalfaabadi@gmail.com" title="pelanginalfaabadi@gmail.com" className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">mail</a>
+            <a href="tel:+6285933885" title="Novy Larasati" className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">call</a>
+            <a href="tel:+6285117261988" title="Krisna Jembawan" className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">support_agent</a>
           </div>
         </div>
       </div>
