@@ -7,30 +7,30 @@ import Link from "next/link";
 const sliderData = [
   {
     id: "briq",
-    title: "Perekat Briket & Energi",
-    tagline: "Vertikal Briq",
+    title: "Perekat Briket Arang Batok Kelapa Kelas Ekspor",
+    tagline: "Cocogum BRIQ — Binder Briket Organik",
     description:
-      "Perekat organik kelas ekspor penyokong pembakaran tanpa asap dan 95% retensi padatan (fixed carbon).",
+      "Pangkas pemakaian perekat hingga 1/3 dari binder biasa. Tanpa asap, 95% fixed carbon terjaga — memenuhi standar shisha internasional.",
     bgImage:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBM50B0UD4q4tnXufehxkMZVSvG4wuTz1GAQrmWxWKEwS_GhFL4B6iVeRDi1_LZ_yLAc1-HhjC6lJg0tH3rvnN_y2PX7YUbhRh9mHCJxJ5miEw5tIQ5KwdHA3yuga-LAeeuZWPOIBVH12Z-NTRPQKmUrSqP37OHoFgmsHHRoxyim8cw0T5zXSwJq15bvyzqWZRilPVyPshtMU_4soYAMF5susnN8AAoALbMragrf_fYobWWBDa-wiIuJSO9cvI2kNCCIWclz0LqTKw",
     linkUrl: "/produk",
   },
   {
     id: "coal",
-    title: "Karbon Aktif & Filtrasi",
-    tagline: "Vertikal Lingkungan",
+    title: "Binder Coal Fines untuk Industri Tambang Batubara",
+    tagline: "Cocogum COAL — Zero Waste Mining",
     description:
-      "Mengaglomerasi partikel dan membungkam debu silika beracun tanpa merusak tingkat Iodine bahan murni tambang.",
+      "Ubah debu batubara (coal fines) menjadi briket energi kalori tinggi. Kurangi limbah tambang, penuhi target ESG perusahaan.",
     bgImage:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAZZkJB4zezNOQ3KEBahQaFjt8qAsdasnwLtokxRhKLYTERndIvNI-Als4U487SxVSYqzG2beOnbiMAi8Z9pqgIHH1GqLAg8yWXapOuH6oj6KJJNuYGzpM9fgCzREPlL2Ikzks10_D8c_J0Zms7DHhPgEKT4hjTmn_qjY53RELzHbyeuVkYp_5cPmpKguQioTKpPZbNzoyPGaYn_Q4_7LpyPUlyJPr0yFWTwJ4ac-we6oKVUKXYzo2UouCXshu7I_Bqo-2gCYiQoLQ",
     linkUrl: "/produk",
   },
   {
     id: "feed",
-    title: "Presisi Akuakultur",
-    tagline: "Vertikal Agro-Feed",
+    title: "Perekat Pelet Pakan Ikan, Udang & Unggas",
+    tagline: "Cocogum FEED — Binder Pakan Organik",
     description:
-      "Binder nutrisi tanpa toksin dengan jaminan stabilitas ekstrem di perairan untuk menekan lost feeding rate.",
+      "Pelet tidak hancur di air, 100% organik bebas toksin. Kurangi food waste dan tingkatkan efisiensi FCR pakan ternak Anda.",
     bgImage:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBtRua1vEdWz65dVnwVJiUFp4rqUmMkUs5bGW1PAYTilz3bzRCw9IhpYTe-w9O8YuOFIDqxSC3nimXwskkJmbLd6YTMOPCokl78HJNpysipbkk22GE6r7wuDGkJVpIIWuIu4WaWCSQsepKp2f4ljWnO25XhbGPaVMcvvV5-o9MKsCUceT5uzyo5RoanP4U1G7opMGULCXyVtjJjs74S1A1lPoznK1wQKzqXyStk96vRSyvDIJ7lCNsRdCUhifXWg1d65_2idiUG2F0",
     linkUrl: "/produk",
