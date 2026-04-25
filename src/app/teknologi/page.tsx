@@ -1,28 +1,45 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Teknologi() {
   return (
     <>
-      {/* Hero Section: The Science of Organic Bonds */}
-      <section className="relative bg-primary overflow-hidden py-28 md:py-36">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-container to-primary opacity-95"></div>
-        {/* Subtle geometric or lab overlay */}
-        <div className="absolute right-0 top-0 w-full md:w-1/2 h-full">
-          <img className="w-full h-full object-cover mix-blend-overlay opacity-30 object-right" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAQ_96z6Lp2eZ_53M5rr-nYcZZdzkNp1PIafwIS42z8DfQnpKWqTgG0xMqmbChhl_2gKHMeEB_8aKht9Eei-3LkSqRyFw0NLwa1ArqB6rJhW0lbPQJ7PU8mGXIvv7fUpcRz7t-6982rEQe-r56LEdJALaGu3a6UK5-h-Rw97BBPcceS7qXRTKh3A82E06HrxwU5PxliQ4twh2Hmr3OrAP_9Uwd_557SWijR-IvtS8FAwfVPpDp0vFO8BM-f0jVtYZHEhNcU4UFkUM" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary to-transparent pointer-events-none"></div>
+      {/* Hero Section (Beranda Aesthetic) */}
+      <section className="relative w-full h-[80vh] min-h-[600px] bg-black group overflow-hidden">
+        <div className="absolute inset-0 bg-black z-0 overflow-hidden">
+           <Image
+             src={"/imagebannerteknologi.webp"}
+             fill
+             className="object-cover opacity-50"
+             alt="Teknologi Riset Cocogum"
+             priority={true}
+             sizes="100vw"
+           />
+           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+           <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-80"></div>
         </div>
-        
-        <div className="relative max-w-7xl mx-auto px-8 z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="max-w-xl">
-            <span className="inline-block px-3 py-1 bg-surface-container-lowest/10 text-emerald-100 border border-emerald-100/30 text-xs font-bold tracking-[0.2em] uppercase mb-6 rounded-sm backdrop-blur-sm shadow-sm">Pusat Riset Molekular</span>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-headline font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
-              Sains <br /><span className="text-white">Ikatan Struktural.</span>
+
+        <div className="relative z-20 max-w-7xl mx-auto px-8 w-full h-full flex flex-col justify-center">
+          <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            <div className="w-fit mb-6 overflow-hidden">
+              <span className="inline-flex px-3 py-1 bg-surface-lowest/10 text-emerald-100 border border-emerald-100/20 text-xs font-bold tracking-[0.2em] uppercase rounded backdrop-blur-sm shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                Pusat Riset Molekular
+              </span>
+            </div>
+            <h1 className="font-headline font-extrabold text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.15] mb-8 drop-shadow-xl filter">
+              Sains <br className="hidden md:block" />{" "}
+              Ikatan Struktural.
             </h1>
-            <p className="text-lg md:text-xl text-on-primary-container/90 leading-relaxed mb-8">
-              Di fasilitas labolatorium <em>Cocogum Industrial</em>, selulosa sisa pertanian tak lagi dipandang sebagai limbah—melainkan bahan dasar (<em>backbone</em>) bagi perekat polimer silang berkekuatan industri berat. Kami menyaingi sintetis beracun hingga ke tingkat atom.
+            <p className="text-on-primary-container text-lg md:text-xl mb-10 leading-relaxed font-light max-w-xl">
+              Di fasilitas laboratorium <em className="text-white drop-shadow-md">Cocogum Industrial</em>, selulosa sisa pertanian tak lagi dipandang sebagai limbah—melainkan bahan dasar (<em>backbone</em>) bagi perekat polimer silang berkekuatan industri berat. Kami menyaingi sintetis beracun hingga ke tingkat atom.
             </p>
-            <div className="flex gap-4">
-              <a href="#analisis-data" className="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-surface-tint hover:-translate-y-1 hover:text-white transition-all shadow-lg flex items-center gap-2">
-                Eksplorasi Data Klinis <span className="material-symbols-outlined text-xl">insights</span>
-              </a>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="#analisis-data"
+                className="bg-primary-fixed text-on-primary-fixed px-8 py-4 font-bold rounded hover:bg-white transition-all transform active:scale-95 duration-200 shadow-2xl flex items-center gap-2 group/btn"
+              >
+                Eksplorasi Data Klinis <span className="material-symbols-outlined text-xl transition-transform group-hover/btn:translate-y-1">insights</span>
+              </Link>
             </div>
           </div>
         </div>
