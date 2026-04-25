@@ -7,10 +7,10 @@ import Link from "next/link";
 const sliderData = [
   {
     id: "briq",
-    title: "Perekat Briket Arang Batok Kelapa Kelas Ekspor",
+    title: "Revolusi Perekat Organik: Kuat, Alami, dan Berkelanjutan.",
     tagline: "Cocogum BRIQ — Binder Briket Organik",
     description:
-      "Pangkas pemakaian perekat hingga 1/3 dari binder biasa. Tanpa asap, 95% fixed carbon terjaga — memenuhi standar shisha internasional.",
+      "Cocogum adalah solusi binder ramah lingkungan berperforma tinggi untuk berbagai kebutuhan industri—mulai dari briket hingga pakan ternak. Hemat biaya, bebas kimia berbahaya.",
     bgImage:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBM50B0UD4q4tnXufehxkMZVSvG4wuTz1GAQrmWxWKEwS_GhFL4B6iVeRDi1_LZ_yLAc1-HhjC6lJg0tH3rvnN_y2PX7YUbhRh9mHCJxJ5miEw5tIQ5KwdHA3yuga-LAeeuZWPOIBVH12Z-NTRPQKmUrSqP37OHoFgmsHHRoxyim8cw0T5zXSwJq15bvyzqWZRilPVyPshtMU_4soYAMF5susnN8AAoALbMragrf_fYobWWBDa-wiIuJSO9cvI2kNCCIWclz0LqTKw",
     linkUrl: "/produk",
