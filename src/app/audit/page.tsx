@@ -67,19 +67,19 @@ export default function AuditPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-black text-primary uppercase tracking-widest">Nama Perusahaan</label>
-                    <input type="text" placeholder="PT. Briket Jaya Utama" className="w-full bg-white border-2 border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" placeholder="PT. Briket Jaya Utama" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-black text-primary uppercase tracking-widest">Nama Lengkap & Jabatan</label>
-                    <input type="text" placeholder="Budi Santoso - Manager Produksi" className="w-full bg-white border-2 border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" placeholder="Budi Santoso - Manager Produksi" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-black text-primary uppercase tracking-widest">Lokasi Pabrik (Kota)</label>
-                    <input type="text" placeholder="Semarang, Jawa Tengah" className="w-full bg-white border-2 border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" placeholder="Semarang, Jawa Tengah" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-black text-primary uppercase tracking-widest">Nomor WhatsApp</label>
-                    <input type="text" placeholder="+62 812..." className="w-full bg-white border-2 border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" placeholder="+62 812..." className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function AuditPage() {
                     <label className="text-xs font-black text-primary uppercase tracking-widest block">Jenis Bahan Baku Utama</label>
                     <div className="grid grid-cols-2 gap-3">
                       {["Tempurung Kelapa", "Kayu", "Batubara", "Campuran"].map((item) => (
-                        <label key={item} className="flex items-center gap-3 bg-white p-4 rounded-xl border-2 border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
+                        <label key={item} className="flex items-center gap-3 bg-white p-4 rounded-xl border border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
                           <input type="radio" name="raw_material" value={item} className="accent-primary w-5 h-5" />
                           <span className="text-sm text-primary font-bold">{item}</span>
                         </label>
@@ -108,7 +108,7 @@ export default function AuditPage() {
                     <label className="text-xs font-black text-primary uppercase tracking-widest block">Jenis Produk</label>
                     <div className="grid grid-cols-2 gap-3">
                       {["Briket BBQ", "Briket Shisha", "Pakan", "Batubara"].map((item) => (
-                        <label key={item} className="flex items-center gap-3 bg-white p-4 rounded-xl border-2 border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
+                        <label key={item} className="flex items-center gap-3 bg-white p-4 rounded-xl border border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
                           <input type="checkbox" name="product_type" value={item} className="accent-primary w-5 h-5" />
                           <span className="text-sm text-primary font-bold">{item}</span>
                         </label>
@@ -117,11 +117,11 @@ export default function AuditPage() {
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-black text-primary uppercase tracking-widest block">Kapasitas (Ton / Bulan)</label>
-                    <input type="number" placeholder="50" className="w-full bg-white border-2 border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="number" placeholder="50" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-black text-primary uppercase tracking-widest block">Pemakaian Tapioka per Bulan (kg)</label>
-                    <input type="number" placeholder="5000" className="w-full bg-white border-2 border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="number" placeholder="5000" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-bold placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                 </div>
               </div>
@@ -138,14 +138,14 @@ export default function AuditPage() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="space-y-2">
                       <label className="text-xs font-black text-primary uppercase tracking-widest">Alat Mixing</label>
-                      <select className="w-full bg-white border-2 border-primary/20 rounded-xl px-4 py-3.5 text-primary font-black outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
+                      <select className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-black outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
                         <option value="manual">Manual</option>
                         <option value="mixer">Mesin Mixer</option>
                       </select>
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-black text-primary uppercase tracking-widest">Sistem Cetak</label>
-                      <select className="w-full bg-white border-2 border-primary/20 rounded-xl px-4 py-3.5 text-primary font-black outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
+                      <select className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-black outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
                         <option value="press">Press Manual</option>
                         <option value="hydraulic">Hydraulic</option>
                         <option value="screw">Screw Extruder</option>
@@ -153,7 +153,7 @@ export default function AuditPage() {
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-black text-primary uppercase tracking-widest">Pengeringan</label>
-                      <select className="w-full bg-white border-2 border-primary/20 rounded-xl px-4 py-3.5 text-primary font-black outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
+                      <select className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-black outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
                         <option value="gas">Oven Gas</option>
                         <option value="kayu">Oven Kayu</option>
                         <option value="jemur">Jemur Matahari</option>
@@ -164,19 +164,19 @@ export default function AuditPage() {
                   <div className="space-y-4">
                     <label className="text-xs font-black text-primary uppercase tracking-widest block">Komposisi Adonan (%)</label>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      <div className="bg-primary/5 p-4 rounded-xl border-2 border-primary/20 shadow-inner">
+                      <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-inner">
                         <span className="text-[10px] text-primary/60 font-black block mb-1 uppercase tracking-tighter">Arang</span>
                         <input type="text" placeholder="85" className="w-full bg-transparent text-xl font-black text-primary outline-none" />
                       </div>
-                      <div className="bg-primary/5 p-4 rounded-xl border-2 border-primary/20 shadow-inner">
+                      <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-inner">
                         <span className="text-[10px] text-primary/60 font-black block mb-1 uppercase tracking-tighter">Tapioka</span>
                         <input type="text" placeholder="5" className="w-full bg-transparent text-xl font-black text-primary outline-none" />
                       </div>
-                      <div className="bg-primary/5 p-4 rounded-xl border-2 border-primary/20 shadow-inner">
+                      <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-inner">
                         <span className="text-[10px] text-primary/60 font-black block mb-1 uppercase tracking-tighter">Air</span>
                         <input type="text" placeholder="10" className="w-full bg-transparent text-xl font-black text-primary outline-none" />
                       </div>
-                      <div className="bg-primary/5 p-4 rounded-xl border-2 border-primary/20 shadow-inner">
+                      <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-inner">
                         <span className="text-[10px] text-primary/60 font-black block mb-1 uppercase tracking-tighter">Lainnya</span>
                         <input type="text" placeholder="0" className="w-full bg-transparent text-xl font-black text-primary outline-none" />
                       </div>
@@ -198,7 +198,7 @@ export default function AuditPage() {
                     <label className="text-xs font-black text-primary uppercase tracking-widest block">Kendala Produksi Saat Ini</label>
                     <div className="grid grid-cols-1 gap-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
                       {["Retak saat kering", "Mudah hancur", "Tidak padat", "Lama kering", "Boros binder", "Hasil tidak konsisten"].map((item) => (
-                        <label key={item} className="flex items-center gap-3 bg-white p-3 rounded-lg border-2 border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
+                        <label key={item} className="flex items-center gap-3 bg-white p-3 rounded-lg border border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
                           <input type="checkbox" className="accent-primary w-5 h-5" />
                           <span className="text-sm text-primary font-black">{item}</span>
                         </label>
@@ -209,7 +209,7 @@ export default function AuditPage() {
                     <label className="text-xs font-black text-primary uppercase tracking-widest block">Target Optimasi Anda</label>
                     <div className="grid grid-cols-1 gap-2">
                     {["Mengurangi biaya binder", "Meningkatkan kekuatan produk", "Mempercepat pengeringan", "Menstabilkan kualitas produksi", "Upgrade ke kualitas premium"].map((item) => (
-                        <label key={item} className="flex items-center gap-3 bg-white p-3 rounded-lg border-2 border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
+                        <label key={item} className="flex items-center gap-3 bg-white p-3 rounded-lg border border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
                           <input type="checkbox" className="accent-primary w-5 h-5" />
                           <span className="text-sm text-primary font-black">{item}</span>
                         </label>
