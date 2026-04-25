@@ -28,12 +28,57 @@ export default function AuditPage() {
     optimizationTargets: [] as string[]
   });
 
-  const nextStep = () => setStep((s) => Math.min(s + 1, totalSteps));
+  const validateStep = (currentStep: number) => {
+    if (currentStep === 1) {
+      if (!formData.companyName.trim()) return "Nama Perusahaan wajib diisi.";
+      if (!formData.contactName.trim()) return "Nama Lengkap & Jabatan wajib diisi.";
+      if (!formData.factoryLocation.trim()) return "Lokasi Pabrik (Kota) wajib diisi.";
+      if (!formData.whatsappNumber.trim()) return "Nomor WhatsApp wajib diisi.";
+    } else if (currentStep === 2) {
+      if (!formData.rawMaterial) return "Pilih Jenis Bahan Baku Utama.";
+      if (formData.productType.length === 0) return "Pilih minimal satu Jenis Produk.";
+      if (!formData.capacityTon) return "Kapasitas produksi wajib diisi.";
+      if (!formData.tapiocaUsage) return "Pemakaian tapioka wajib diisi.";
+    } else if (currentStep === 3) {
+      if (!formData.compArang || !formData.compTapioka || !formData.compAir || !formData.compLainnya) return "Semua kolom komposisi wajib diisi (isi 0 jika tidak digunakan).";
+    } else if (currentStep === 4) {
+      if (formData.productionConstraints.length === 0) return "Pilih minimal satu Kendala Produksi.";
+      if (formData.optimizationTargets.length === 0) return "Pilih minimal satu Target Optimasi.";
+    }
+    return "";
+  };
+
+  const nextStep = () => {
+    const errorMsg = validateStep(step);
+    if (errorMsg) {
+      alert(errorMsg);
+      return;
+    }
+    setStep((s) => Math.min(s + 1, totalSteps));
+  };
+
   const prevStep = () => setStep((s) => Math.max(s - 1, 1));
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    let finalValue = value;
+
+    // Auto capitalize every word for regular text inputs
+    if (type === "text" && !name.startsWith("comp") && name !== "whatsappNumber" && name !== "capacityTon" && name !== "tapiocaUsage") {
+      finalValue = finalValue.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+    }
+
+    // Force numbers only for number inputs
+    if (type === "number" || name.startsWith("comp") || name === "capacityTon" || name === "tapiocaUsage") {
+      finalValue = finalValue.replace(/[^0-9.]/g, "");
+    }
+    
+    // For whatsapp, allow +, spaces and numbers
+    if (name === "whatsappNumber") {
+      finalValue = finalValue.replace(/[^0-9+\s-]/g, "");
+    }
+
+    setFormData(prev => ({ ...prev, [name]: finalValue }));
   };
 
   const handleCheckboxArray = (name: string, value: string, checked: boolean) => {
@@ -48,6 +93,12 @@ export default function AuditPage() {
   };
 
   const handleSubmit = async () => {
+    const errorMsg = validateStep(totalSteps);
+    if (errorMsg) {
+      alert(errorMsg);
+      return;
+    }
+    
     setIsSubmitting(true);
     
     const payload = {
@@ -238,11 +289,11 @@ export default function AuditPage() {
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-primary uppercase tracking-widest block">Kapasitas (Ton / Bulan)</label>
-                    <input type="number" name="capacityTon" value={formData.capacityTon} onChange={handleChange} placeholder="50" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" inputMode="numeric" name="capacityTon" value={formData.capacityTon} onChange={handleChange} placeholder="50" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-primary uppercase tracking-widest block">Pemakaian Tapioka per Bulan (kg)</label>
-                    <input type="number" name="tapiocaUsage" value={formData.tapiocaUsage} onChange={handleChange} placeholder="5000" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" inputMode="numeric" name="tapiocaUsage" value={formData.tapiocaUsage} onChange={handleChange} placeholder="5000" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                 </div>
               </div>
