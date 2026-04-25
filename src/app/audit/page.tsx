@@ -64,12 +64,12 @@ export default function AuditPage() {
     let finalValue = value;
 
     // Auto capitalize every word for regular text inputs
-    if (type === "text" && !name.startsWith("comp") && name !== "whatsappNumber" && name !== "capacityTon" && name !== "tapiocaUsage") {
+    if (type === "text" && !["whatsappNumber", "capacityTon", "tapiocaUsage", "compArang", "compTapioka", "compAir", "compLainnya"].includes(name)) {
       finalValue = finalValue.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
     }
 
     // Force numbers only for number inputs
-    if (type === "number" || name.startsWith("comp") || name === "capacityTon" || name === "tapiocaUsage") {
+    if (type === "number" || ["capacityTon", "tapiocaUsage", "compArang", "compTapioka", "compAir", "compLainnya"].includes(name)) {
       finalValue = finalValue.replace(/[^0-9.]/g, "");
     }
     
