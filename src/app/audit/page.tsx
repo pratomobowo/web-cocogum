@@ -5,9 +5,128 @@ import React, { useState } from "react";
 export default function AuditPage() {
   const [step, setStep] = useState(1);
   const totalSteps = 4;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const [formData, setFormData] = useState({
+    companyName: "",
+    contactName: "",
+    factoryLocation: "",
+    whatsappNumber: "",
+    rawMaterial: "",
+    productType: [] as string[],
+    capacityTon: "",
+    tapiocaUsage: "",
+    mixerTool: "manual",
+    printingSystem: "press",
+    dryingMethod: "gas",
+    compArang: "",
+    compTapioka: "",
+    compAir: "",
+    compLainnya: "",
+    productionConstraints: [] as string[],
+    optimizationTargets: [] as string[]
+  });
 
   const nextStep = () => setStep((s) => Math.min(s + 1, totalSteps));
   const prevStep = () => setStep((s) => Math.max(s - 1, 1));
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleCheckboxArray = (name: string, value: string, checked: boolean) => {
+    setFormData(prev => {
+      const currentArray = prev[name as keyof typeof prev] as string[];
+      if (checked) {
+        return { ...prev, [name]: [...currentArray, value] };
+      } else {
+        return { ...prev, [name]: currentArray.filter(v => v !== value) };
+      }
+    });
+  };
+
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    
+    const payload = {
+      ...formData,
+      productType: formData.productType.join(", "),
+      productionConstraints: formData.productionConstraints.join(", "),
+      optimizationTargets: formData.optimizationTargets.join(", ")
+    };
+
+    try {
+      const WEB_APP_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+      
+      if (!WEB_APP_URL) {
+        console.error("No Google Script URL found. Please set NEXT_PUBLIC_GOOGLE_SCRIPT_URL in .env.local");
+        alert("Google Script URL is missing. Please check .env configuration.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      await fetch(WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors", // Required for Google Apps Script to avoid CORS errors
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload)
+      });
+      
+      setIsSuccess(true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      console.error(error);
+      alert("Terjadi kesalahan jaringan saat mengirim data. Silakan coba lagi.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isSuccess) {
+    return (
+      <main className="min-h-screen bg-surface pt-32 pb-24 px-8 overflow-hidden relative flex items-center justify-center">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+        
+        <div className="max-w-2xl text-center z-10 animate-in fade-in zoom-in-95 duration-500">
+          <div className="w-24 h-24 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner border border-emerald-500/20">
+            <span className="material-symbols-outlined text-5xl">check_circle</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-headline font-extrabold text-primary mb-6 tracking-tight">
+            Data Audit <span className="text-emerald-600">Berhasil Dikirim!</span>
+          </h1>
+          <p className="text-on-surface-variant text-lg mb-10 leading-relaxed">
+            Terima kasih telah meluangkan waktu untuk mengisi form audit. Tim teknis Cocogum akan segera menganalisa performa serta parameter produksi pabrik Anda, dan menghubungi Anda via WhatsApp untuk mendiskusikan rekomendasi solusi.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <a href="/" className="bg-primary/5 text-primary border border-primary/20 font-bold px-8 py-3 rounded-xl hover:bg-primary/10 transition-all">
+              Kembali ke Beranda
+            </a>
+            <button 
+              onClick={() => {
+                setIsSuccess(false);
+                setStep(1);
+                setFormData({
+                  companyName: "", contactName: "", factoryLocation: "", whatsappNumber: "",
+                  rawMaterial: "", productType: [], capacityTon: "", tapiocaUsage: "",
+                  mixerTool: "manual", printingSystem: "press", dryingMethod: "gas",
+                  compArang: "", compTapioka: "", compAir: "", compLainnya: "",
+                  productionConstraints: [], optimizationTargets: []
+                });
+              }}
+              className="bg-primary text-white font-bold px-8 py-3 rounded-xl hover:shadow-xl transition-all"
+            >
+              Kirim Audit Baru
+            </button>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-surface pt-32 pb-24 px-8 overflow-hidden relative text-on-surface">
@@ -56,7 +175,7 @@ export default function AuditPage() {
         <div className="bg-surface-container-low border border-outline-variant/20 rounded-3xl p-8 md:p-12 shadow-2xl relative">
           <div className="organic-grain absolute inset-0 opacity-5 pointer-events-none rounded-3xl"></div>
           
-          <form className="relative z-10 space-y-8">
+          <form className="relative z-10 space-y-8" onSubmit={(e) => e.preventDefault()}>
             {/* STEP 1: IDENTITAS */}
             {step === 1 && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6">
@@ -67,19 +186,19 @@ export default function AuditPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-primary uppercase tracking-widest">Nama Perusahaan</label>
-                    <input type="text" placeholder="PT. Briket Jaya Utama" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" name="companyName" value={formData.companyName} onChange={handleChange} placeholder="PT. Briket Jaya Utama" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-primary uppercase tracking-widest">Nama Lengkap & Jabatan</label>
-                    <input type="text" placeholder="Budi Santoso - Manager Produksi" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" name="contactName" value={formData.contactName} onChange={handleChange} placeholder="Budi Santoso - Manager Produksi" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-primary uppercase tracking-widest">Lokasi Pabrik (Kota)</label>
-                    <input type="text" placeholder="Semarang, Jawa Tengah" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" name="factoryLocation" value={formData.factoryLocation} onChange={handleChange} placeholder="Semarang, Jawa Tengah" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-primary uppercase tracking-widest">Nomor WhatsApp</label>
-                    <input type="text" placeholder="+62 812..." className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="text" name="whatsappNumber" value={formData.whatsappNumber} onChange={handleChange} placeholder="+62 812..." className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                 </div>
               </div>
@@ -98,7 +217,7 @@ export default function AuditPage() {
                     <div className="grid grid-cols-2 gap-3">
                       {["Tempurung Kelapa", "Kayu", "Batubara", "Campuran"].map((item) => (
                         <label key={item} className="flex items-center gap-3 bg-white p-4 rounded-xl border border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
-                          <input type="radio" name="raw_material" value={item} className="accent-primary w-5 h-5" />
+                          <input type="radio" name="rawMaterial" value={item} checked={formData.rawMaterial === item} onChange={handleChange} className="accent-primary w-5 h-5" />
                           <span className="text-sm text-primary font-medium">{item}</span>
                         </label>
                       ))}
@@ -109,7 +228,7 @@ export default function AuditPage() {
                     <div className="grid grid-cols-2 gap-3">
                       {["Briket BBQ", "Briket Shisha", "Pakan", "Batubara"].map((item) => (
                         <label key={item} className="flex items-center gap-3 bg-white p-4 rounded-xl border border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
-                          <input type="checkbox" name="product_type" value={item} className="accent-primary w-5 h-5" />
+                          <input type="checkbox" name="productType" value={item} checked={formData.productType.includes(item)} onChange={(e) => handleCheckboxArray("productType", item, e.target.checked)} className="accent-primary w-5 h-5" />
                           <span className="text-sm text-primary font-medium">{item}</span>
                         </label>
                       ))}
@@ -117,11 +236,11 @@ export default function AuditPage() {
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-primary uppercase tracking-widest block">Kapasitas (Ton / Bulan)</label>
-                    <input type="number" placeholder="50" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="number" name="capacityTon" value={formData.capacityTon} onChange={handleChange} placeholder="50" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-primary uppercase tracking-widest block">Pemakaian Tapioka per Bulan (kg)</label>
-                    <input type="number" placeholder="5000" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
+                    <input type="number" name="tapiocaUsage" value={formData.tapiocaUsage} onChange={handleChange} placeholder="5000" className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium placeholder:text-primary/50 outline-none focus:border-primary transition-all shadow-sm" />
                   </div>
                 </div>
               </div>
@@ -138,14 +257,14 @@ export default function AuditPage() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="space-y-2">
                       <label className="text-xs font-bold text-primary uppercase tracking-widest">Alat Mixing</label>
-                      <select className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
+                      <select name="mixerTool" value={formData.mixerTool} onChange={handleChange} className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
                         <option value="manual">Manual</option>
                         <option value="mixer">Mesin Mixer</option>
                       </select>
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-bold text-primary uppercase tracking-widest">Sistem Cetak</label>
-                      <select className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
+                      <select name="printingSystem" value={formData.printingSystem} onChange={handleChange} className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
                         <option value="press">Press Manual</option>
                         <option value="hydraulic">Hydraulic</option>
                         <option value="screw">Screw Extruder</option>
@@ -153,7 +272,7 @@ export default function AuditPage() {
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-bold text-primary uppercase tracking-widest">Pengeringan</label>
-                      <select className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
+                      <select name="dryingMethod" value={formData.dryingMethod} onChange={handleChange} className="w-full bg-white border border-primary/20 rounded-xl px-4 py-3.5 text-primary font-medium outline-none appearance-none cursor-pointer focus:border-primary shadow-sm">
                         <option value="gas">Oven Gas</option>
                         <option value="kayu">Oven Kayu</option>
                         <option value="jemur">Jemur Matahari</option>
@@ -166,19 +285,19 @@ export default function AuditPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-inner">
                         <span className="text-[10px] text-primary/60 font-bold block mb-1 uppercase tracking-tighter">Arang</span>
-                        <input type="text" placeholder="85" className="w-full bg-transparent text-xl font-semibold text-primary outline-none" />
+                        <input type="text" name="compArang" value={formData.compArang} onChange={handleChange} placeholder="85" className="w-full bg-transparent text-xl font-semibold text-primary outline-none" />
                       </div>
                       <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-inner">
                         <span className="text-[10px] text-primary/60 font-bold block mb-1 uppercase tracking-tighter">Tapioka</span>
-                        <input type="text" placeholder="5" className="w-full bg-transparent text-xl font-semibold text-primary outline-none" />
+                        <input type="text" name="compTapioka" value={formData.compTapioka} onChange={handleChange} placeholder="5" className="w-full bg-transparent text-xl font-semibold text-primary outline-none" />
                       </div>
                       <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-inner">
                         <span className="text-[10px] text-primary/60 font-bold block mb-1 uppercase tracking-tighter">Air</span>
-                        <input type="text" placeholder="10" className="w-full bg-transparent text-xl font-semibold text-primary outline-none" />
+                        <input type="text" name="compAir" value={formData.compAir} onChange={handleChange} placeholder="10" className="w-full bg-transparent text-xl font-semibold text-primary outline-none" />
                       </div>
                       <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-inner">
                         <span className="text-[10px] text-primary/60 font-bold block mb-1 uppercase tracking-tighter">Lainnya</span>
-                        <input type="text" placeholder="0" className="w-full bg-transparent text-xl font-semibold text-primary outline-none" />
+                        <input type="text" name="compLainnya" value={formData.compLainnya} onChange={handleChange} placeholder="0" className="w-full bg-transparent text-xl font-semibold text-primary outline-none" />
                       </div>
                     </div>
                   </div>
@@ -199,7 +318,7 @@ export default function AuditPage() {
                     <div className="grid grid-cols-1 gap-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
                       {["Retak saat kering", "Mudah hancur", "Tidak padat", "Lama kering", "Boros binder", "Hasil tidak konsisten"].map((item) => (
                         <label key={item} className="flex items-center gap-3 bg-white p-3 rounded-lg border border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
-                          <input type="checkbox" className="accent-primary w-5 h-5" />
+                          <input type="checkbox" name="productionConstraints" value={item} checked={formData.productionConstraints.includes(item)} onChange={(e) => handleCheckboxArray("productionConstraints", item, e.target.checked)} className="accent-primary w-5 h-5" />
                           <span className="text-sm text-primary font-medium">{item}</span>
                         </label>
                       ))}
@@ -210,7 +329,7 @@ export default function AuditPage() {
                     <div className="grid grid-cols-1 gap-2">
                     {["Mengurangi biaya binder", "Meningkatkan kekuatan produk", "Mempercepat pengeringan", "Menstabilkan kualitas produksi", "Upgrade ke kualitas premium"].map((item) => (
                         <label key={item} className="flex items-center gap-3 bg-white p-3 rounded-lg border border-primary/10 cursor-pointer hover:border-primary/40 transition-all shadow-sm">
-                          <input type="checkbox" className="accent-primary w-5 h-5" />
+                          <input type="checkbox" name="optimizationTargets" value={item} checked={formData.optimizationTargets.includes(item)} onChange={(e) => handleCheckboxArray("optimizationTargets", item, e.target.checked)} className="accent-primary w-5 h-5" />
                           <span className="text-sm text-primary font-medium">{item}</span>
                         </label>
                       ))}
@@ -225,7 +344,7 @@ export default function AuditPage() {
               <button 
                 type="button"
                 onClick={prevStep}
-                disabled={step === 1}
+                disabled={step === 1 || isSubmitting}
                 className={`flex items-center gap-2 font-bold px-6 py-3 rounded-xl transition-all ${
                   step === 1 ? "opacity-0 pointer-events-none" : "bg-primary/5 text-primary hover:bg-primary/10"
                 }`}
@@ -238,7 +357,8 @@ export default function AuditPage() {
                 <button 
                   type="button"
                   onClick={nextStep}
-                  className="bg-primary text-white font-bold px-8 py-3 rounded-xl hover:shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
+                  disabled={isSubmitting}
+                  className="bg-primary text-white font-bold px-8 py-3 rounded-xl hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all flex items-center gap-2"
                 >
                   Lanjutkan
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -246,10 +366,14 @@ export default function AuditPage() {
               ) : (
                 <button 
                   type="button"
-                  className="bg-emerald-500 text-white font-bold px-10 py-3 rounded-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
+                  onClick={handleSubmit}
+                  disabled={isSubmitting}
+                  className={`bg-emerald-500 text-white font-bold px-10 py-3 rounded-xl hover:shadow-[0_0_30px_rgba(16,185,129,0.3)] transition-all flex items-center gap-2 ${
+                    isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:-translate-y-1 active:translate-y-0"
+                  }`}
                 >
-                  Kirim Data Audit
-                  <span className="material-symbols-outlined text-sm">check_circle</span>
+                  {isSubmitting ? "Mengirim Data..." : "Kirim Data Audit"}
+                  <span className="material-symbols-outlined text-sm">{isSubmitting ? "hourglass_empty" : "check_circle"}</span>
                 </button>
               )}
             </div>
