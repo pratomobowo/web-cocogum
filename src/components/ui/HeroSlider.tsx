@@ -32,7 +32,7 @@ const sliderData = [
     description:
       "Pelet tidak hancur di air, 100% organik bebas toksin. Kurangi food waste dan tingkatkan efisiensi FCR pakan ternak Anda.",
     bgImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBtRua1vEdWz65dVnwVJiUFp4rqUmMkUs5bGW1PAYTilz3bzRCw9IhpYTe-w9O8YuOFIDqxSC3nimXwskkJmbLd6YTMOPCokl78HJNpysipbkk22GE6r7wuDGkJVpIIWuIu4WaWCSQsepKp2f4ljWnO25XhbGPaVMcvvV5-o9MKsCUceT5uzyo5RoanP4U1G7opMGULCXyVtjJjs74S1A1lPoznK1wQKzqXyStk96vRSyvDIJ7lCNsRdCUhifXWg1d65_2idiUG2F0",
+      "/imagehero3.webp",
     linkUrl: "/produk",
   },
 ];
