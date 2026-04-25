@@ -1,21 +1,39 @@
 import React from 'react';
+import Image from "next/image";
 
 export default function StudiKasus() {
   return (
     <>
-      {/* Hero Section Konsisten bg-primary */}
-      <section className="relative bg-primary overflow-hidden py-28 md:py-36">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-container to-primary opacity-95"></div>
-        <div className="grain-texture absolute inset-0 mix-blend-overlay opacity-30 pointer-events-none"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-8 z-10 text-center">
-          <span className="inline-block px-3 py-1 bg-surface-container-lowest/10 text-emerald-100 border border-emerald-100/30 text-xs font-bold tracking-[0.2em] uppercase mb-6 rounded-sm backdrop-blur-sm shadow-sm">Kinerja Di Lapangan</span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
-            Hasil <span className="text-white">Terukur.</span> Operasional <span className="text-white">Nyata.</span>
-          </h1>
-          <p className="text-lg md:text-xl text-on-primary-container/90 max-w-3xl mx-auto leading-relaxed">
-            Data rekam jejak implementasi <em>Cocogum Modified Organic Binder (CMOB)</em> pada jalur produksi skala industri—tanpa melebih-lebihkan, hanya fakta rekayasa di balik penghematan energi dan stabilisasi kualitas.
-          </p>
+      {/* Hero Section (Beranda Aesthetic) */}
+      <section className="relative w-full h-[80vh] min-h-[600px] bg-black group overflow-hidden">
+        <div className="absolute inset-0 bg-black z-0 overflow-hidden">
+           <Image
+             src={"/imagenbanner4.webp"}
+             fill
+             className="object-cover opacity-50"
+             alt="Studi Kasus Cocogum"
+             priority={true}
+             sizes="100vw"
+           />
+           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+           <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-80"></div>
+        </div>
+
+        <div className="relative z-20 max-w-7xl mx-auto px-8 w-full h-full flex flex-col justify-center">
+          <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            <div className="w-fit mb-6 overflow-hidden">
+              <span className="inline-flex px-3 py-1 bg-surface-lowest/10 text-emerald-100 border border-emerald-100/20 text-xs font-bold tracking-[0.2em] uppercase rounded backdrop-blur-sm shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                Kinerja Di Lapangan
+              </span>
+            </div>
+            <h1 className="font-headline font-extrabold text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.15] mb-8 drop-shadow-xl filter">
+              Hasil Terukur. <br className="hidden md:block" />{" "}
+              Operasional Nyata.
+            </h1>
+            <p className="text-on-primary-container text-lg md:text-xl mb-10 leading-relaxed font-light max-w-xl">
+              Data rekam jejak implementasi <strong className="text-white drop-shadow-md">Cocogum Modified Organic Binder (CMOB)</strong> pada jalur produksi skala industri—tanpa melebih-lebihkan, hanya fakta rekayasa di balik penghematan energi dan stabilisasi kualitas.
+            </p>
+          </div>
         </div>
       </section>
 
