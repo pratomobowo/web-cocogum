@@ -107,7 +107,7 @@ export default function ProdukBriq() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative">
               <Image 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM50B0UD4q4tnXufehxkMZVSvG4wuTz1GAQrmWxWKEwS_GhFL4B6iVeRDi1_LZ_yLAc1-HhjC6lJg0tH3rvnN_y2PX7YUbhRh9mHCJxJ5miEw5tIQ5KwdHA3yuga-LAeeuZWPOIBVH12Z-NTRPQKmUrSqP37OHoFgmsHHRoxyim8cw0T5zXSwJq15bvyzqWZRilPVyPshtMU_4soYAMF5susnN8AAoALbMragrf_fYobWWBDa-wiIuJSO9cvI2kNCCIWclz0LqTKw"
+                src="/imagebricketcocogum.webp"
                 alt="Produksi Briket Shisha menggunakan Cocogum BRIQ"
                 fill
                 className="object-cover"

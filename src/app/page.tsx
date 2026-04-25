@@ -206,7 +206,7 @@ export default function Home() {
               <img
                 alt="Instalasi mesin pabrik briket arang menggunakan perekat organik Cocogum BRIQ tanpa modifikasi hardware"
                 className="w-full aspect-video object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGEMeaZjY_8spOWxNN1SQDJhNnJVL7rF3DvoZOiybq_v0H2DphBk0xbpzZoHkkaIrxJkLu5RFVFo30EGPyKw7lvNza_nOgjkpLsuVwO159p94dXPjaAy6gc0hBhexlxYNxGoBF72ZuHuzo7jPZwEN4RxteEKK0zJUpIvDyD3nVqr7XuVVWT0d0_-8YbOjdi94xN2bH2-XD30waeyBSwX9FmlzrKlF0jvJPnXz5otbognVPSh1CM3OKC8hoDVemMJBkRQYpXvMvZoc"
+                src="/imagebricketcocogum.webp"
               />
             </div>
             <div className="w-full lg:w-1/2">

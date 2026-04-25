@@ -137,7 +137,7 @@ export default function Produk() {
                 <img
                   alt="Produksi briket arang batok kelapa ekspor menggunakan perekat organik Cocogum BRIQ tanpa asap"
                   className="w-full aspect-[4/3] object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM50B0UD4q4tnXufehxkMZVSvG4wuTz1GAQrmWxWKEwS_GhFL4B6iVeRDi1_LZ_yLAc1-HhjC6lJg0tH3rvnN_y2PX7YUbhRh9mHCJxJ5miEw5tIQ5KwdHA3yuga-LAeeuZWPOIBVH12Z-NTRPQKmUrSqP37OHoFgmsHHRoxyim8cw0T5zXSwJq15bvyzqWZRilPVyPshtMU_4soYAMF5susnN8AAoALbMragrf_fYobWWBDa-wiIuJSO9cvI2kNCCIWclz0LqTKw"
+                  src="/imagebricketcocogum.webp"
                 />
                 <div className="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
               </div>
