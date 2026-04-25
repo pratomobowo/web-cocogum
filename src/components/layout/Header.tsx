@@ -31,7 +31,16 @@ export default function Header() {
 
   const menuLinks = [
     { name: "Beranda", href: "/" },
-    { name: "Produk", href: "/produk" },
+    { 
+      name: "Produk", 
+      href: "/produk",
+      subItems: [
+        { name: "Cocogum BRIQ", href: "/produk#briq" },
+        { name: "Cocogum COAL", href: "/produk#coal" },
+        { name: "Cocogum FEED", href: "/produk#feed" },
+        { name: "Cocogum MOSQ", href: "/produk#mosq" },
+      ]
+    },
     { name: "Teknologi", href: "/teknologi" },
     { name: "Studi Kasus", href: "/studi-kasus" },
     { name: "Audit Produksi", href: "/audit" },
@@ -60,11 +69,32 @@ export default function Header() {
 
           {/* Desktop Navigation (Modern Pill Center) */}
           <div className="hidden lg:flex items-center gap-1 bg-surface-container-lowest/80 p-1.5 rounded-full border border-outline-variant/20 shadow-sm backdrop-blur-sm">
-            {menuLinks.map((link) => (
-              <Link key={link.href} href={link.href} className={`${isActive(link.href)} px-5 py-2 rounded-full text-sm transition-all`}>
-                {link.name}
-              </Link>
-            ))}
+            {menuLinks.map((link) => {
+              if (link.subItems) {
+                return (
+                  <div key={link.href} className="relative group/dropdown flex items-center h-full">
+                    <Link href={link.href} className={`${isActive(link.href)} flex items-center gap-1 px-5 py-2 rounded-full text-sm transition-all`}>
+                      {link.name}
+                      <span className="material-symbols-outlined text-[16px] group-hover/dropdown:-rotate-180 transition-transform duration-300">expand_more</span>
+                    </Link>
+                    <div className="absolute top-[110%] left-0 w-60 bg-surface-container-lowest/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-outline-variant/10 opacity-0 translate-y-4 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto transition-all duration-300 z-50 overflow-hidden">
+                      <div className="py-2 flex flex-col">
+                        {link.subItems.map((sub, idx) => (
+                          <Link key={sub.href} href={sub.href} className="px-5 py-3.5 text-sm text-on-surface-variant hover:text-primary hover:bg-primary/5 hover:pl-6 transition-all font-medium border-b border-outline-variant/5 last:border-none">
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <Link key={link.href} href={link.href} className={`${isActive(link.href)} px-5 py-2 rounded-full text-sm transition-all`}>
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Actions (Search + Call-to-Action) */}
@@ -115,20 +145,51 @@ export default function Header() {
           <div className="p-8 pt-24 flex-1">
             <div className="flex flex-col gap-2">
               <p className="text-[10px] font-bold text-primary/50 uppercase tracking-[0.3em] mb-4 pl-4">Menu Utama</p>
-              {menuLinks.map((link) => (
-                <Link 
-                  key={link.href} 
-                  href={link.href} 
-                  className={`flex items-center justify-between px-6 py-4 rounded-2xl transition-all ${
-                    pathname === link.href 
-                      ? "bg-primary/10 text-primary font-bold translate-x-2" 
-                      : "text-on-surface-variant hover:bg-surface-container hover:text-primary"
-                  }`}
-                >
-                  <span className="text-lg">{link.name}</span>
-                  <span className="material-symbols-outlined text-primary/30">chevron_right</span>
-                </Link>
-              ))}
+              {menuLinks.map((link) => {
+                if (link.subItems) {
+                  return (
+                    <div key={link.href} className="flex flex-col mb-1">
+                      <Link 
+                        key={link.href + "-main"} 
+                        href={link.href} 
+                        className={`flex items-center justify-between px-6 py-4 rounded-2xl transition-all ${
+                          pathname === link.href 
+                            ? "bg-primary/10 text-primary font-bold translate-x-2" 
+                            : "text-on-surface-variant hover:bg-surface-container hover:text-primary"
+                        }`}
+                      >
+                        <span className="text-lg">{link.name}</span>
+                      </Link>
+                      <div className="pl-12 flex flex-col gap-2 mt-1 mb-2">
+                        {link.subItems.map(sub => (
+                          <Link 
+                            key={sub.href} 
+                            href={sub.href} 
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-on-surface-variant hover:text-primary text-sm font-medium flex items-center gap-3 py-1.5"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary/40 block"></span> {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+                return (
+                  <Link 
+                    key={link.href} 
+                    href={link.href} 
+                    className={`flex items-center justify-between px-6 py-4 rounded-2xl transition-all mb-1 ${
+                      pathname === link.href 
+                        ? "bg-primary/10 text-primary font-bold translate-x-2" 
+                        : "text-on-surface-variant hover:bg-surface-container hover:text-primary"
+                    }`}
+                  >
+                    <span className="text-lg">{link.name}</span>
+                    <span className="material-symbols-outlined text-primary/30">chevron_right</span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
