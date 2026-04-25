@@ -10,21 +10,21 @@ export default function AuditPage() {
   const prevStep = () => setStep((s) => Math.max(s - 1, 1));
 
   return (
-    <main className="min-h-screen bg-primary pt-32 pb-24 px-8 overflow-hidden relative text-white">
+    <main className="min-h-screen bg-surface pt-32 pb-24 px-8 overflow-hidden relative text-on-surface">
       {/* Background Decorative */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <span className="inline-block px-3 py-1 bg-white/10 text-emerald-100 border border-white/20 text-[10px] font-bold tracking-[0.2em] uppercase mb-4 rounded">
+          <span className="inline-block px-3 py-1 bg-primary/10 text-primary border border-primary/20 text-[10px] font-bold tracking-[0.2em] uppercase mb-4 rounded">
             Self-Audit B2B
           </span>
-          <h1 className="text-4xl md:text-5xl font-headline font-black text-white mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-headline font-black text-primary mb-6 tracking-tight">
             Optimasi Produksi & <span className="text-surface-tint">Kualitas Briket</span>
           </h1>
-          <p className="text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-on-surface-variant text-lg leading-relaxed max-w-2xl mx-auto">
             Audit mandiri ini dirancang untuk membantu Anda mengidentifikasi efisiensi biaya bahan baku, durasi mixing, hingga solusi konkret kendala produksi.
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function AuditPage() {
                 {i < 4 && (
                   <div className={`absolute top-5 left-1/2 w-full h-[2px] -z-0 ${step > i ? "bg-surface-tint" : "bg-white/10"}`}></div>
                 )}
-                <span className={`text-[10px] mt-2 font-bold uppercase tracking-widest ${step >= i ? "text-white" : "text-white/30"}`}>
+                <span className={`text-[10px] mt-2 font-bold uppercase tracking-widest ${step >= i ? "text-primary" : "text-on-surface/30"}`}>
                   {i === 1 ? "Identitas" : i === 2 ? "Material" : i === 3 ? "Proses" : "Analisa"}
                 </span>
               </div>
@@ -53,21 +53,21 @@ export default function AuditPage() {
         </div>
 
         {/* Form Card */}
-        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl relative">
-          <div className="organic-grain absolute inset-0 opacity-20 pointer-events-none rounded-3xl"></div>
+        <div className="bg-surface-container-low border border-outline-variant/20 rounded-3xl p-8 md:p-12 shadow-2xl relative">
+          <div className="organic-grain absolute inset-0 opacity-5 pointer-events-none rounded-3xl"></div>
           
           <form className="relative z-10 space-y-8">
             {/* STEP 1: IDENTITAS */}
             {step === 1 && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6">
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-surface-tint/20 text-surface-tint flex items-center justify-center text-sm">01</span>
+                <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-sm">01</span>
                   Informasi Kontak & Perusahaan
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-white/50 uppercase tracking-widest">Nama Perusahaan</label>
-                    <input type="text" placeholder="PT. Briket Jaya Utama" className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder:text-white/20 outline-none focus:border-surface-tint/50 transition-all" />
+                    <label className="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Nama Perusahaan</label>
+                    <input type="text" placeholder="PT. Briket Jaya Utama" className="w-full bg-surface-container-high border border-outline-variant/50 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-on-surface/20 outline-none focus:border-primary/50 transition-all" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-white/50 uppercase tracking-widest">Nama Lengkap & Jabatan</label>
@@ -98,8 +98,8 @@ export default function AuditPage() {
                     <div className="grid grid-cols-2 gap-3">
                       {["Tempurung Kelapa", "Kayu", "Batubara", "Campuran"].map((item) => (
                         <label key={item} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5 cursor-pointer hover:bg-white/10 transition-all">
-                          <input type="radio" name="raw_material" value={item} className="accent-surface-tint" />
-                          <span className="text-sm text-white/80">{item}</span>
+                          <input type="radio" name="raw_material" value={item} className="accent-primary" />
+                          <span className="text-sm text-on-surface-variant">{item}</span>
                         </label>
                       ))}
                     </div>
@@ -227,7 +227,7 @@ export default function AuditPage() {
                 onClick={prevStep}
                 disabled={step === 1}
                 className={`flex items-center gap-2 font-bold px-6 py-3 rounded-xl transition-all ${
-                  step === 1 ? "opacity-0 pointer-events-none" : "bg-white/5 text-white hover:bg-white/10"
+                  step === 1 ? "opacity-0 pointer-events-none" : "bg-primary/5 text-primary hover:bg-primary/10"
                 }`}
               >
                 <span className="material-symbols-outlined text-sm">arrow_back</span>
@@ -258,9 +258,9 @@ export default function AuditPage() {
 
         {/* Support Info */}
         <div className="mt-12 text-center">
-          <p className="text-white/40 text-sm">
+          <p className="text-on-surface-variant text-sm">
             Butuh bantuan teknis saat pengisian? Hubungi tim ahli kami via 
-            <a href="https://wa.me/6285117261988" className="text-surface-tint ml-1 hover:underline">WhatsApp Support</a>
+            <a href="https://wa.me/6285117261988" className="text-primary ml-1 font-bold hover:underline">WhatsApp Support</a>
           </p>
         </div>
       </div>
