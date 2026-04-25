@@ -27,20 +27,6 @@ export default function Home() {
       {/* Hero Slider Interaktif */}
       <HeroSlider />
 
-      {/* Social Proof / Certification Strip */}
-      <section aria-label="Sertifikasi dan standar mutu" className="bg-surface-container border-y border-outline-variant/10 py-10">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col items-center">
-          <p className="text-xs font-bold text-outline uppercase tracking-[0.2em] mb-6 text-center">
-            Terverifikasi Memenuhi Standar Mutu Ekspor &amp; Kepabeanan Global
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-16 opacity-50 grayscale transition-all duration-300 hover:grayscale-0 hover:opacity-100">
-            <span className="font-headline font-bold text-xl md:text-2xl text-on-surface flex items-center gap-2"><span className="material-symbols-outlined text-3xl">verified</span> ISO 14001</span>
-            <span className="font-headline font-bold text-xl md:text-2xl text-on-surface flex items-center gap-2"><span className="material-symbols-outlined text-3xl">recycling</span> ZERO WASTE</span>
-            <span className="font-headline font-bold text-xl md:text-2xl text-on-surface flex items-center gap-2"><span className="material-symbols-outlined text-3xl">eco</span> REACH COMPLIANT</span>
-            <span className="font-headline font-bold text-xl md:text-2xl text-on-surface flex items-center gap-2"><span className="material-symbols-outlined text-3xl">restaurant</span> FOOD GRADE</span>
-          </div>
-        </div>
-      </section>
 
       {/* Keunggulan Utama Perekat Organik */}
       <section aria-labelledby="keunggulan-heading" className="py-24 bg-surface-container-low relative">
