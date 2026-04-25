@@ -77,11 +77,18 @@ export default function Header() {
                       {link.name}
                       <span className="material-symbols-outlined text-[16px] group-hover/dropdown:-rotate-180 transition-transform duration-300">expand_more</span>
                     </Link>
-                    <div className="absolute top-[110%] left-0 w-60 bg-surface-container-lowest/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-outline-variant/10 opacity-0 translate-y-4 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto transition-all duration-300 z-50 overflow-hidden">
-                      <div className="py-2 flex flex-col">
+                    <div className="absolute top-[120%] left-1/2 -translate-x-1/2 w-64 bg-surface/95 backdrop-blur-2xl rounded-2xl shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)] border border-outline-variant/10 opacity-0 translate-y-4 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto transition-all duration-300 ease-out z-50 p-2">
+                      <div className="flex flex-col gap-1">
                         {link.subItems.map((sub, idx) => (
-                          <Link key={sub.href} href={sub.href} className="px-5 py-3.5 text-sm text-on-surface-variant hover:text-primary hover:bg-primary/5 hover:pl-6 transition-all font-medium border-b border-outline-variant/5 last:border-none">
-                            {sub.name}
+                          <Link key={sub.href} href={sub.href} className="group/item flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-primary/5 transition-all">
+                            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover/item:bg-primary group-hover/item:shadow-lg transition-all duration-300">
+                              <span className="material-symbols-outlined text-[20px] text-primary group-hover/item:text-white transition-colors">
+                                {idx === 0 ? "forest" : idx === 1 ? "factory" : idx === 2 ? "grass" : "bug_report"}
+                              </span>
+                            </div>
+                            <span className="text-sm font-bold text-on-surface-variant group-hover/item:text-primary transition-colors">
+                              {sub.name}
+                            </span>
                           </Link>
                         ))}
                       </div>
@@ -160,15 +167,20 @@ export default function Header() {
                       >
                         <span className="text-lg">{link.name}</span>
                       </Link>
-                      <div className="pl-12 flex flex-col gap-2 mt-1 mb-2">
-                        {link.subItems.map(sub => (
+                      <div className="pl-6 flex flex-col gap-1 mt-1 mb-4 ml-6 border-l-2 border-outline-variant/10">
+                        {link.subItems.map((sub, idx) => (
                           <Link 
                             key={sub.href} 
                             href={sub.href} 
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="text-on-surface-variant hover:text-primary text-sm font-medium flex items-center gap-3 py-1.5"
+                            className="text-on-surface-variant hover:text-primary hover:bg-primary/5 px-4 ml-2 rounded-xl text-sm font-bold flex items-center gap-4 py-3 transition-colors"
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary/40 block"></span> {sub.name}
+                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                               <span className="material-symbols-outlined text-[18px] text-primary">
+                                  {idx === 0 ? "forest" : idx === 1 ? "factory" : idx === 2 ? "grass" : "bug_report"}
+                               </span> 
+                            </div>
+                            {sub.name}
                           </Link>
                         ))}
                       </div>
