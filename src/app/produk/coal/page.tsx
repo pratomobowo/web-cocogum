@@ -107,7 +107,7 @@ export default function ProdukCoal() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative">
               <Image 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZZkJB4zezNOQ3KEBahQaFjt8qAsdasnwLtokxRhKLYTERndIvNI-Als4U487SxVSYqzG2beOnbiMAi8Z9pqgIHH1GqLAg8yWXapOuH6oj6KJJNuYGzpM9fgCzREPlL2Ikzks10_D8c_J0Zms7DHhPgEKT4hjTmn_qjY53RELzHbyeuVkYp_5cPmpKguQioTKpPZbNzoyPGaYn_Q4_7LpyPUlyJPr0yFWTwJ4ac-we6oKVUKXYzo2UouCXshu7I_Bqo-2gCYiQoLQ"
+                src="/imagecoal.webp"
                 alt="Produksi debu batubara menjadi briket dengan Cocogum COAL"
                 fill
                 className="object-cover"

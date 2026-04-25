@@ -145,7 +145,7 @@ export default function Home() {
                 <img
                   alt="Binder organik Cocogum COAL untuk mengikat debu batubara (coal fines) menjadi briket energi tinggi"
                   className="w-full h-full object-cover grayscale mix-blend-multiply transition-all duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZZkJB4zezNOQ3KEBahQaFjt8qAsdasnwLtokxRhKLYTERndIvNI-Als4U487SxVSYqzG2beOnbiMAi8Z9pqgIHH1GqLAg8yWXapOuH6oj6KJJNuYGzpM9fgCzREPlL2Ikzks10_D8c_J0Zms7DHhPgEKT4hjTmn_qjY53RELzHbyeuVkYp_5cPmpKguQioTKpPZbNzoyPGaYn_Q4_7LpyPUlyJPr0yFWTwJ4ac-we6oKVUKXYzo2UouCXshu7I_Bqo-2gCYiQoLQ"
+                  src="/imagecoal.webp"
                 />
               </div>
               <div className="relative z-10 max-w-md h-full flex flex-col justify-between">

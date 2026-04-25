@@ -109,7 +109,7 @@ export default function StudiKasus() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
              <div className="order-2 lg:order-1 relative">
                 <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-2xl opacity-10"></div>
-                <img alt="Logistik Batubara" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZZkJB4zezNOQ3KEBahQaFjt8qAsdasnwLtokxRhKLYTERndIvNI-Als4U487SxVSYqzG2beOnbiMAi8Z9pqgIHH1GqLAg8yWXapOuH6oj6KJJNuYGzpM9fgCzREPlL2Ikzks10_D8c_J0Zms7DHhPgEKT4hjTmn_qjY53RELzHbyeuVkYp_5cPmpKguQioTKpPZbNzoyPGaYn_Q4_7LpyPUlyJPr0yFWTwJ4ac-we6oKVUKXYzo2UouCXshu7I_Bqo-2gCYiQoLQ" />
+                <img alt="Logistik Batubara" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="/imagecoal.webp" />
              </div>
              <div className="order-1 lg:order-2">
                 <span className="text-sm font-bold tracking-widest text-primary uppercase mb-3 block">SEKTOR LOGISTIK RAW MATERIAL</span>

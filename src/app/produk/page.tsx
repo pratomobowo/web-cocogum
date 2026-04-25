@@ -181,7 +181,7 @@ export default function Produk() {
               <img
                 alt="Binder organik Cocogum COAL mengikat debu batubara (coal fines) menjadi briket energi kalori tinggi untuk tambang dan PLTU"
                 className="h-full w-full object-cover grayscale contrast-125"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk47V1DVPTry_-chxPqLD_lD-oMBYqM8l_xeQ7BItWOYePh1UeKlXNnmQx_sIWH7KHI10RM-PdrjxAbXcHczRI7MKe-EqF3XbN1exXygHfrx1RgGS3H9jQKvPVeOr6MUbvaV5p114oGADYQS9NI8NtjppsAx1GEDDVMXrdby5uR9FgWOv07NbHzzRAvuTqw6jB7lsUNglPNmwxSLzmhXDS5S1CiKSzCkBuuhfD37n4_q8J-GwYaKzFHzUYD8fkKnJKXPXiaOp6kyA"
+                src="/imagecoal.webp"
               />
             </div>
           </div>
