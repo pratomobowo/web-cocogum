@@ -62,9 +62,6 @@ export const metadata: Metadata = {
     title: "Cocogum | Perekat Organik Briket & Pakan Ekspor",
     description: "Binder organik kelas ekspor untuk briket arang, pakan ikan, dan tambang. Pabrik di Bandung.",
   },
-  icons: {
-    icon: "/logo-cocogum.webp",
-  },
   robots: {
     index: true,
     follow: true,
