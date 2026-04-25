@@ -34,6 +34,7 @@ export default function Header() {
     { name: "Produk", href: "/produk" },
     { name: "Teknologi", href: "/teknologi" },
     { name: "Studi Kasus", href: "/studi-kasus" },
+    { name: "Audit Produksi", href: "/audit" },
     { name: "Tentang Kami", href: "/tentang" },
   ];
 
