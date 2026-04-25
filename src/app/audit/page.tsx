@@ -67,13 +67,15 @@ export default function AuditPage() {
         return;
       }
 
+      const formBody = new URLSearchParams(payload as Record<string, string>);
+
       await fetch(WEB_APP_URL, {
         method: "POST",
         mode: "no-cors", // Required for Google Apps Script to avoid CORS errors
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify(payload)
+        body: formBody.toString()
       });
       
       setIsSuccess(true);
