@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Produk Perekat Organik — Cocogum BRIQ, COAL & FEED | Binder Briket, Pakan & Tambang",
@@ -18,37 +20,44 @@ export const metadata: Metadata = {
 export default function Produk() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-primary-container py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-container to-primary opacity-95"></div>
-        <div className="organic-grain absolute inset-0 opacity-40 mix-blend-overlay"></div>
-        <div className="max-w-7xl mx-auto px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <span className="inline-block px-3 py-1 bg-surface-container-highest text-on-surface-variant text-xs font-bold tracking-widest uppercase mb-6 rounded-sm">
-              Perekat Organik Kelas Ekspor — Bebas Formaldehida
-            </span>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-8 font-headline leading-[1.1]">
+      {/* Hero Section (Beranda Aesthetic) */}
+      <section className="relative w-full h-[80vh] min-h-[600px] bg-black group overflow-hidden">
+        <div className="absolute inset-0 bg-black z-0 overflow-hidden">
+           <Image
+             src={"/imagebannerproduk.webp"}
+             fill
+             className="object-cover opacity-50"
+             alt="Produk Binder Organik Cocogum"
+             priority={true}
+             sizes="100vw"
+           />
+           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+           <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-80"></div>
+        </div>
+
+        <div className="relative z-20 max-w-7xl mx-auto px-8 w-full h-full flex flex-col justify-center">
+          <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            <div className="w-fit mb-6 overflow-hidden">
+              <span className="inline-flex px-3 py-1 bg-surface-lowest/10 text-emerald-100 border border-emerald-100/20 text-xs font-bold tracking-[0.2em] uppercase rounded backdrop-blur-sm shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                Perekat Organik Kelas Ekspor — Bebas Formaldehida
+              </span>
+            </div>
+            <h1 className="font-headline font-extrabold text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.15] mb-8 drop-shadow-xl filter">
               Perekat Organik <br className="hidden md:block" />{" "}
-              <span className="text-white">untuk Industri.</span>
+              untuk Industri.
             </h1>
-            <p className="text-xl text-on-primary-container leading-relaxed max-w-xl">
-              Tiga lini produk binder organik Cocogum — <strong>BRIQ</strong>, <strong>COAL</strong>, dan{" "}
-              <strong>FEED</strong> — diformulasikan khusus dari bahan alami batok kelapa untuk menggantikan
+            <p className="text-on-primary-container text-lg md:text-xl mb-10 leading-relaxed font-light max-w-xl">
+              Tiga lini produk binder organik Cocogum — <strong className="text-white drop-shadow-md">BRIQ</strong>, <strong className="text-white drop-shadow-md">COAL</strong>, dan{" "}
+              <strong className="text-white drop-shadow-md">FEED</strong> — diformulasikan khusus dari bahan alami batok kelapa untuk menggantikan
               perekat sintetis berbasis formaldehida di pabrik briket, tambang, dan pakan ternak.
             </p>
-          </div>
-          <div className="hidden md:block">
-            <div className="aspect-square bg-surface-lowest/5 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 p-8 shadow-2xl relative group">
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent z-10 pointer-events-none"></div>
-              <img
-                alt="Proses rekayasa perekat organik Cocogum berbasis selulosa batok kelapa di laboratorium Bandung"
-                className="w-full h-full object-cover rounded-xl grayscale contrast-125 group-hover:scale-105 transition-transform duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCogpFZbEA-lgFhtmRoha_UhQ2ksqDa1-4lQ7UZbyrXa2gbUd9BB0zlfN25A-bfovY_6doKveGcPT0QR1yaRyVIa0jN4aFdq17JoHfdbq8nwP6bxEcv6L72KbeB0sBovZnk70tH0WP6MGlLPs7M0eeLL3HwW6vEpQWfMZmYjbyJ8aUsOwy2Ooc8_PISHL08FfJsZqu-46InMUSYK4fVzcl9ZEtuCRpkhQJtVRRwIxKvnLC_cXbGJwrpShBECok8akYFe8atslOZAac"
-              />
-              <div className="absolute bottom-12 left-12 z-20">
-                <p className="text-white font-headline text-2xl font-bold">Binder Organik Berperforma Tinggi</p>
-                <p className="text-emerald-200/80 text-sm mt-2">Daya lekat mekanis — tahan suhu tinggi, tahan air.</p>
-              </div>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="#briq"
+                className="bg-primary-fixed text-on-primary-fixed px-8 py-4 font-bold rounded hover:bg-white transition-all transform active:scale-95 duration-200 shadow-2xl flex items-center gap-2 group/btn"
+              >
+                Eksplorasi Varian Cocogum <span className="material-symbols-outlined text-xl transition-transform group-hover/btn:translate-y-1">arrow_downward</span>
+              </Link>
             </div>
           </div>
         </div>
