@@ -134,7 +134,7 @@ export default function Home() {
                 <p className="text-sm mt-3 text-on-surface-variant group-hover:text-white/70">Pangkas waktu oven hingga 50%, tanpa asap, pertahankan 95% fixed carbon — ideal untuk pasar shisha internasional.</p>
               </div>
               <div className="mt-8">
-                <a className="font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/produk#briq">Lihat Spesifikasi BRIQ <span className="material-symbols-outlined">chevron_right</span></a>
+                <a className="font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/produk/briq">Lihat Spesifikasi BRIQ <span className="material-symbols-outlined">chevron_right</span></a>
               </div>
             </div>
 
@@ -156,7 +156,7 @@ export default function Home() {
                   <p className="text-on-surface-variant mt-4 leading-relaxed">Ubah coal fines (debu batubara) terbuang menjadi briket energi kalori tinggi yang bernilai jual. Solusi untuk Perusahaan Tambang, PLTU, dan Industri Boiler.</p>
                 </div>
                 <div className="mt-8">
-                  <a className="text-primary bg-primary/5 px-6 py-3 rounded inline-flex font-bold items-center gap-2 hover:bg-primary hover:text-white transition-all" href="/produk#coal">Lihat Spesifikasi COAL <span className="material-symbols-outlined">arrow_forward</span></a>
+                  <a className="text-primary bg-primary/5 px-6 py-3 rounded inline-flex font-bold items-center gap-2 hover:bg-primary hover:text-white transition-all" href="/produk/coal">Lihat Spesifikasi COAL <span className="material-symbols-outlined">arrow_forward</span></a>
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@ export default function Home() {
                 <p className="text-emerald-200/80 mt-3 text-sm leading-relaxed">Pelet tidak hancur di air, 100% organik bebas toksin. Kurangi food waste dan tingkatkan efisiensi FCR pakan ternak.</p>
               </div>
               <div className="mt-8 relative z-10">
-                <a className="font-bold flex items-center gap-2 text-primary-fixed hover:text-white transition-colors" href="/produk#feed">Lihat Spesifikasi FEED <span className="material-symbols-outlined">arrow_forward</span></a>
+                <a className="font-bold flex items-center gap-2 text-primary-fixed hover:text-white transition-colors" href="/produk/feed">Lihat Spesifikasi FEED <span className="material-symbols-outlined">arrow_forward</span></a>
               </div>
             </div>
 
@@ -189,7 +189,7 @@ export default function Home() {
                 <p className="text-sm mt-3 text-on-surface-variant group-hover:text-white/70">Formula khusus untuk obat nyamuk bakar. 100% organik, tidak berbau, dan pembakaran stabil (smoldering) sepanjang malam tanpa terputus.</p>
               </div>
               <div className="mt-8 relative z-10">
-                <a className="font-bold flex items-center gap-2 group-hover:gap-4 transition-all text-primary group-hover:text-white" href="/produk#mosq">Lihat Spesifikasi MOSQ <span className="material-symbols-outlined">chevron_right</span></a>
+                <a className="font-bold flex items-center gap-2 group-hover:gap-4 transition-all text-primary group-hover:text-white" href="/produk/mosq">Lihat Spesifikasi MOSQ <span className="material-symbols-outlined">chevron_right</span></a>
               </div>
             </div>
           </div>

@@ -35,10 +35,10 @@ export default function Header() {
       name: "Produk", 
       href: "/produk",
       subItems: [
-        { name: "Cocogum BRIQ", href: "/produk#briq" },
-        { name: "Cocogum COAL", href: "/produk#coal" },
-        { name: "Cocogum FEED", href: "/produk#feed" },
-        { name: "Cocogum MOSQ", href: "/produk#mosq" },
+        { name: "Cocogum BRIQ", href: "/produk/briq" },
+        { name: "Cocogum COAL", href: "/produk/coal" },
+        { name: "Cocogum FEED", href: "/produk/feed" },
+        { name: "Cocogum MOSQ", href: "/produk/mosq" },
       ]
     },
     { name: "Teknologi", href: "/teknologi" },
