@@ -151,7 +151,7 @@ export default function Header() {
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="p-8 pt-24 flex-1">
+          <div className="p-8 pt-24 flex-1 overflow-y-auto">
             <div className="flex flex-col gap-2">
               <p className="text-[10px] font-bold text-primary/50 uppercase tracking-[0.3em] mb-4 pl-4">Menu Utama</p>
               {menuLinks.map((link) => {
