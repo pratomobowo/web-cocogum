@@ -32,7 +32,7 @@ export default function FloatingWhatsApp() {
           onClick={() => setIsOpen(false)}
           className="flex items-center justify-end gap-3 group/item w-full"
         >
-          <span className="bg-surface/95 backdrop-blur-md text-on-surface text-xs font-bold px-4 py-2.5 rounded-xl shadow-lg border border-outline-variant/10 opacity-0 translate-x-4 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all whitespace-nowrap hidden sm:block">
+          <span className="bg-surface/95 backdrop-blur-md text-on-surface text-xs font-bold px-4 py-2.5 rounded-xl shadow-lg border border-outline-variant/10 whitespace-nowrap block">
             Form Audit Produksi
           </span>
           <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-primary-container active:scale-95 transition-transform flex-shrink-0">
@@ -48,7 +48,7 @@ export default function FloatingWhatsApp() {
           onClick={() => setIsOpen(false)}
           className="flex items-center justify-end gap-3 group/item w-full"
         >
-          <span className="bg-surface/95 backdrop-blur-md text-on-surface text-xs font-bold px-4 py-2.5 rounded-xl shadow-lg border border-outline-variant/10 opacity-0 translate-x-4 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all whitespace-nowrap hidden sm:block">
+          <span className="bg-surface/95 backdrop-blur-md text-on-surface text-xs font-bold px-4 py-2.5 rounded-xl shadow-lg border border-outline-variant/10 whitespace-nowrap block">
             Chat WhatsApp Sales
           </span>
           <div className="w-12 h-12 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#20bd5a] active:scale-95 transition-transform flex-shrink-0">
@@ -63,15 +63,19 @@ export default function FloatingWhatsApp() {
       {/* Main Trigger Button (Headset/Close) */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_-5px_rgba(0,0,0,0.3)] transform hover:scale-105 active:scale-95 transition-all duration-500 relative z-10 ${
-          isOpen ? "bg-surface-container-high text-on-surface rotate-90" : "bg-primary text-white hover:bg-primary-container hover:shadow-primary/30"
+        className={`h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_-5px_rgba(0,0,0,0.3)] transform hover:scale-105 active:scale-95 transition-all duration-500 relative z-10 overflow-hidden ${
+          isOpen ? "bg-surface-container-high text-on-surface w-14 rotate-90" : "bg-primary text-white hover:bg-primary-container hover:shadow-primary/30 w-[170px]"
         }`}
         aria-label="Menu Bantuan"
       >
-        <span className={`material-symbols-outlined text-[26px] absolute transition-all duration-300 ${isOpen ? "opacity-0 scale-50" : "opacity-100 scale-100"}`}>
-          headset_mic
-        </span>
-        <span className={`material-symbols-outlined text-[26px] absolute transition-all duration-300 ${isOpen ? "opacity-100 scale-100 -rotate-90" : "opacity-0 scale-50"}`}>
+        {/* Hubungi Kami Label */}
+        <div className={`flex items-center justify-center absolute transition-all duration-500 ${isOpen ? "opacity-0 scale-50 -rotate-90" : "opacity-100 scale-100"}`}>
+           <span className="material-symbols-outlined text-[26px] mr-2">headset_mic</span>
+           <span className="font-bold text-sm whitespace-nowrap">Hubungi Kami</span>
+        </div>
+        
+        {/* Close Icon */}
+        <span className={`material-symbols-outlined text-[26px] absolute transition-all duration-500 ${isOpen ? "opacity-100 scale-100 -rotate-90" : "opacity-0 scale-50 rotate-90"}`}>
           close
         </span>
       </button>
