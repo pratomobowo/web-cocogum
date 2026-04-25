@@ -95,13 +95,18 @@ export default function HubungiKami() {
               </div>
             </div>
 
-            <div className="mt-12 rounded-xl overflow-hidden h-64 shadow-inner bg-surface-container relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-container/50 to-transparent z-10 pointer-events-none"></div>
-              <img
-                alt="Lokasi pabrik Cocogum di Baleendah, Kabupaten Bandung, Jawa Barat — produsen perekat organik briket dan pakan"
-                className="w-full h-full object-cover grayscale opacity-60"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3dFRVAyUw6_J4kLyOE0vKdglFvUPetCVJOpv3iKI0mEw6_jQo-30Fl8ieSAlwiwIrlRO2IcjL055KNtmYPQuRS1iq_-YC8HYx8N2fgExCB7oPTU9J97GN9VlFy6g8iyTkNJTQR8Ttw22jwnsz1SdfnnrurfUl9lNFr0y_qtM9zTcks0ml-ULgW-JmghY_H2H0Ppc1yI1hJl60ZhzbQy4M-BKi1zzZsbc3DsUS71oQKIB8g8_GaA1VAgoBFVntt3rqolQidj4JmTI"
-              />
+            <div className="mt-12 rounded-xl overflow-hidden h-64 shadow-inner bg-surface-container relative border border-outline/20">
+              <iframe
+                title="Google Maps Lokasi Cocogum — Jl. Jaksanaranata No. 27, Baleendah"
+                src="https://www.google.com/maps?q=Jl.%20Jaksanaranata%20No.%2027,%20Baleendah,%20Kab.%20Bandung&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+              ></iframe>
             </div>
           </div>
 
