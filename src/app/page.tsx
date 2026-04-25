@@ -124,7 +124,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto">
             {/* Briq */}
             <div className="md:col-span-4 bg-surface-container-high rounded-xl p-8 flex flex-col justify-between hover:bg-primary hover:text-white transition-all group border border-transparent shadow-sm">
               <div>
@@ -162,7 +162,7 @@ export default function Home() {
             </div>
 
             {/* Feed */}
-            <div className="md:col-span-4 bg-primary text-white rounded-xl p-8 flex flex-col justify-between shadow-lg relative overflow-hidden group">
+            <div className="md:col-span-6 bg-primary text-white rounded-xl p-8 flex flex-col justify-between shadow-lg relative overflow-hidden group">
               <div className="absolute -right-6 -bottom-6 opacity-10 transform group-hover:scale-110 transition-transform duration-500">
                 <span className="material-symbols-outlined text-9xl text-white">grass</span>
               </div>
@@ -174,6 +174,22 @@ export default function Home() {
               </div>
               <div className="mt-8 relative z-10">
                 <a className="font-bold flex items-center gap-2 text-primary-fixed hover:text-white transition-colors" href="/produk#feed">Lihat Spesifikasi FEED <span className="material-symbols-outlined">arrow_forward</span></a>
+              </div>
+            </div>
+
+            {/* Mosq */}
+            <div className="md:col-span-6 bg-surface-container-high rounded-xl p-8 flex flex-col justify-between hover:bg-primary hover:text-white transition-all group border border-transparent shadow-sm overflow-hidden relative">
+              <div className="absolute right-0 top-0 opacity-5 transform -translate-y-4 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                <span className="material-symbols-outlined text-9xl">bug_report</span>
+              </div>
+              <div className="relative z-10">
+                <span className="material-symbols-outlined text-4xl text-primary group-hover:text-primary-fixed">bug_report</span>
+                <h3 className="font-headline font-bold text-3xl mt-6">Cocogum MOSQ</h3>
+                <p className="text-on-surface-variant group-hover:text-emerald-200/70 mt-3 font-medium">Perekat Obat Nyamuk Bakar (Mosquito Coil)</p>
+                <p className="text-sm mt-3 text-on-surface-variant group-hover:text-white/70">Formula khusus untuk obat nyamuk bakar. 100% organik, tidak berbau, dan pembakaran stabil (smoldering) sepanjang malam tanpa terputus.</p>
+              </div>
+              <div className="mt-8 relative z-10">
+                <a className="font-bold flex items-center gap-2 group-hover:gap-4 transition-all text-primary group-hover:text-white" href="/produk#mosq">Lihat Spesifikasi MOSQ <span className="material-symbols-outlined">chevron_right</span></a>
               </div>
             </div>
           </div>
