@@ -22,7 +22,7 @@ export default function AuditPage() {
             Self-Audit B2B
           </span>
           <h1 className="text-4xl md:text-5xl font-headline font-black text-primary mb-6 tracking-tight">
-            Optimasi Produksi & <span className="text-surface-tint">Kualitas Briket</span>
+            Optimasi Produksi & <span className="text-primary">Kualitas Briket</span>
           </h1>
           <p className="text-on-surface-variant text-lg leading-relaxed max-w-2xl mx-auto">
             Audit mandiri ini dirancang untuk membantu Anda mengidentifikasi efisiensi biaya bahan baku, durasi mixing, hingga solusi konkret kendala produksi.
@@ -42,7 +42,7 @@ export default function AuditPage() {
                   {i}
                 </div>
                 {i < 4 && (
-                  <div className={`absolute top-5 left-1/2 w-full h-[2px] -z-0 ${step > i ? "bg-primary" : "bg-primary/10"}`}></div>
+                  <div className={`absolute top-5 left-1/2 w-full h-[2px] -z-0 ${step > i ? "bg-primary" : "bg-primary/20"}`}></div>
                 )}
                 <span className={`text-[10px] mt-2 font-black uppercase tracking-widest ${step >= i ? "text-primary" : "text-primary/60"}`}>
                   {i === 1 ? "Identitas" : i === 2 ? "Material" : i === 3 ? "Proses" : "Analisa"}
@@ -61,7 +61,7 @@ export default function AuditPage() {
             {step === 1 && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6">
                 <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-sm">01</span>
+                  <span className="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-sm">01</span>
                   Informasi Kontak & Perusahaan
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -88,8 +88,8 @@ export default function AuditPage() {
             {/* STEP 2: MATERIAL & KAPASITAS */}
             {step === 2 && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6">
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-surface-tint/20 text-surface-tint flex items-center justify-center text-sm">02</span>
+                <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-sm">02</span>
                   Jenis Bahan & Kapasitas Produksi
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -130,8 +130,8 @@ export default function AuditPage() {
             {/* STEP 3: PROSES PRODUKSI */}
             {step === 3 && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6">
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-surface-tint/20 text-surface-tint flex items-center justify-center text-sm">03</span>
+                <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-sm">03</span>
                   Metode & Komposisi Produksi
                 </h2>
                 <div className="space-y-8">
@@ -189,8 +189,8 @@ export default function AuditPage() {
             {/* STEP 4: KENDALA & TARGET */}
             {step === 4 && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6">
-                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-surface-tint/20 text-surface-tint flex items-center justify-center text-sm">04</span>
+                <h2 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-sm">04</span>
                   Analisa Kendala & Target Optimasi
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -221,7 +221,7 @@ export default function AuditPage() {
             )}
 
             {/* Navigation Buttons */}
-            <div className="pt-8 mt-8 border-t border-white/10 flex justify-between items-center">
+            <div className="pt-8 mt-8 border-t border-primary/10 flex justify-between items-center">
               <button 
                 type="button"
                 onClick={prevStep}
@@ -238,7 +238,7 @@ export default function AuditPage() {
                 <button 
                   type="button"
                   onClick={nextStep}
-                  className="bg-surface-tint text-primary font-bold px-8 py-3 rounded-xl hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
+                  className="bg-primary text-white font-bold px-8 py-3 rounded-xl hover:shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
                 >
                   Lanjutkan
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
