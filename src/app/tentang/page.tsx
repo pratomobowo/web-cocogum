@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Tentang Cocogum — Produsen Perekat Organik dari Bandung, Jawa Barat",
@@ -18,49 +20,45 @@ export const metadata: Metadata = {
 export default function Tentang() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative py-28 overflow-hidden bg-primary">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-container to-primary opacity-95"></div>
-        <div className="grain-texture absolute inset-0 mix-blend-overlay opacity-30 pointer-events-none"></div>
+      {/* Hero Section (Beranda Aesthetic) */}
+      <section className="relative w-full h-[80vh] min-h-[600px] bg-black group overflow-hidden">
+        <div className="absolute inset-0 bg-black z-0 overflow-hidden">
+           <Image
+             src={"/imagebannertentangkami.webp"}
+             fill
+             className="object-cover opacity-50"
+             alt="Tentang Cocogum Binder Organik"
+             priority={true}
+             sizes="100vw"
+           />
+           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+           <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-80"></div>
+        </div>
 
-        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
-          <div>
-            <span className="inline-block px-3 py-1 bg-surface-container-lowest/10 text-emerald-100 border border-emerald-100/30 text-xs font-bold tracking-[0.2em] uppercase mb-6 rounded-sm backdrop-blur-sm shadow-sm">
-              Produsen Organic Binder Indonesia
-            </span>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-headline tracking-tight text-white leading-[1.1] mb-6">
-              Cocogum: <br />
-              <span className="text-white">Perekat Organik dari Bandung.</span>
+        <div className="relative z-20 max-w-7xl mx-auto px-8 w-full h-full flex flex-col justify-center">
+          <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            <div className="w-fit mb-6 overflow-hidden">
+              <span className="inline-flex px-3 py-1 bg-surface-lowest/10 text-emerald-100 border border-emerald-100/20 text-xs font-bold tracking-[0.2em] uppercase rounded backdrop-blur-sm shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                Produsen Organic Binder Indonesia
+              </span>
+            </div>
+            <h1 className="font-headline font-extrabold text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.15] mb-8 drop-shadow-xl filter">
+              Cocogum: <br className="hidden md:block" />{" "}
+              Perekat Organik <br className="hidden md:block" /> dari Bandung.
             </h1>
-            <p className="text-lg md:text-xl text-on-primary-container/90 leading-relaxed mb-8">
-              Lebih dari sekadar supplier material, <strong className="text-white font-semibold">Cocogum</strong>{" "}
+            <p className="text-on-primary-container text-lg md:text-xl mb-10 leading-relaxed font-light max-w-xl">
+              Lebih dari sekadar supplier material, <strong className="text-white drop-shadow-md">Cocogum</strong>{" "}
               adalah produsen perekat organik (<em>organic binder</em>) berbahan dasar batok kelapa dari
               Bandung, Jawa Barat. Kami menghadirkan solusi binder industri yang aman, efisien, dan bebas
-              formaldehida — untuk pabrik briket arang, pengolahan pakan ternak, dan tambang batubara.
+              formaldehida.
             </p>
-            <div className="flex gap-4">
-              <a
+            <div className="flex flex-wrap gap-4">
+              <Link
                 href="#filosofi"
-                className="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-surface-tint hover:-translate-y-1 hover:text-white transition-all shadow-lg flex items-center gap-2"
+                className="bg-primary-fixed text-on-primary-fixed px-8 py-4 font-bold rounded hover:bg-white transition-all transform active:scale-95 duration-200 shadow-2xl flex items-center gap-2 group/btn"
               >
-                Pelajari Filosofi Kami <span className="material-symbols-outlined text-xl">south</span>
-              </a>
-            </div>
-          </div>
-          <div className="relative mt-8 md:mt-0">
-            <div className="aspect-square rounded-xl overflow-hidden shadow-2xl relative border border-white/10">
-              <div className="absolute inset-0 bg-primary/20 mix-blend-multiply z-10 pointer-events-none"></div>
-              <img
-                alt="Pabrik perekat organik Cocogum di Baleendah, Kabupaten Bandung, Jawa Barat — produsen binder briket dan pakan ekspor"
-                className="w-full h-full object-cover grayscale contrast-125 hover:scale-105 transition-transform duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4JJl5UOLWQzhhnDfqwkTJR_lL9MvAtmD98pLoTrdaqCnx8mSE7baHgRBxQ1z64dwMCSwUYra-eW4irzHwl2po9eDL2i7KOlkbLJxzV7qoys4-vbtj2sSTS-sEpR0mQXCVBnujMoSYZFtkHdd5YQC4M_RHef1Frc1FwmUdiyPjtOT0aqlXyEqFArSfOhBblMwyPbKHv0vYZ4edCF1YwAtvoyrb-ihwRWwOUPoTDRmxVbFXMTjDX5Yx0DKLs_zs5_qGfS7ryROuudc"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 bg-surface-container-lowest p-8 rounded-xl text-on-surface max-w-xs shadow-2xl z-20 border border-outline-variant/10">
-              <p className="text-3xl font-bold font-headline mb-2 text-primary">12+ Tahun</p>
-              <p className="text-sm opacity-90 leading-relaxed text-on-surface-variant">
-                Meneliti dan memproduksi perekat organik berstandar ekspor untuk industri briket, pakan, dan tambang Indonesia.
-              </p>
+                Pelajari Filosofi Kami <span className="material-symbols-outlined text-xl transition-transform group-hover/btn:translate-y-1">arrow_downward</span>
+              </Link>
             </div>
           </div>
         </div>
