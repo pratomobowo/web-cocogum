@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     default: "Cocogum | Supplier Perekat Organik Briket, Pakan & Tambang Indonesia",
     template: "%s | Cocogum",
   },
+  icons: {
+    icon: "/logo-cocogum.webp",
+    shortcut: "/logo-cocogum.webp",
+    apple: "/logo-cocogum.webp",
+  },
   description:
     "Cocogum adalah produsen perekat organik (organic binder) kelas ekspor untuk pabrik briket arang batok kelapa, pakan ikan & udang, serta penanganan coal fines tambang. Berbasis di Bandung, Jawa Barat.",
   keywords: [
