@@ -77,20 +77,22 @@ export default function Header() {
                       {link.name}
                       <span className="material-symbols-outlined text-[16px] group-hover/dropdown:-rotate-180 transition-transform duration-300">expand_more</span>
                     </Link>
-                    <div className="absolute top-[120%] left-1/2 -translate-x-1/2 w-64 bg-surface/95 backdrop-blur-2xl rounded-2xl shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)] border border-outline-variant/10 opacity-0 translate-y-4 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto transition-all duration-300 ease-out z-50 p-2">
-                      <div className="flex flex-col gap-1">
-                        {link.subItems.map((sub, idx) => (
-                          <Link key={sub.href} href={sub.href} className="group/item flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-primary/5 transition-all">
-                            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover/item:bg-primary group-hover/item:shadow-lg transition-all duration-300">
-                              <span className="material-symbols-outlined text-[20px] text-primary group-hover/item:text-white transition-colors">
-                                {idx === 0 ? "forest" : idx === 1 ? "factory" : idx === 2 ? "grass" : "bug_report"}
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-64 opacity-0 translate-y-4 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto transition-all duration-300 ease-out z-50">
+                      <div className="bg-surface/95 backdrop-blur-2xl rounded-2xl shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)] border border-outline-variant/10 p-2">
+                        <div className="flex flex-col gap-1">
+                          {link.subItems.map((sub, idx) => (
+                            <Link key={sub.href} href={sub.href} className="group/item flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-primary/5 transition-all">
+                              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover/item:bg-primary group-hover/item:shadow-lg transition-all duration-300">
+                                <span className="material-symbols-outlined text-[20px] text-primary group-hover/item:text-white transition-colors">
+                                  {idx === 0 ? "forest" : idx === 1 ? "factory" : idx === 2 ? "grass" : "bug_report"}
+                                </span>
+                              </div>
+                              <span className="text-sm font-bold text-on-surface-variant group-hover/item:text-primary transition-colors">
+                                {sub.name}
                               </span>
-                            </div>
-                            <span className="text-sm font-bold text-on-surface-variant group-hover/item:text-primary transition-colors">
-                              {sub.name}
-                            </span>
-                          </Link>
-                        ))}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
