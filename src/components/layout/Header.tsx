@@ -85,7 +85,11 @@ export default function Header() {
                             <Link key={sub.href} href={sub.href} className="group/item flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-primary/5 transition-all">
                               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover/item:bg-primary group-hover/item:shadow-lg transition-all duration-300">
                                 <span className="material-symbols-outlined text-[20px] text-primary group-hover/item:text-white transition-colors">
-                                  {idx === 0 ? "forest" : idx === 1 ? "factory" : idx === 2 ? "grass" : "bug_report"}
+                                  {sub.name.includes("BRIQ") ? "forest" : 
+                                   sub.name.includes("COAL") ? "factory" : 
+                                   sub.name.includes("FEED") ? "grass" : 
+                                   sub.name.includes("MOSQ") ? "bug_report" : 
+                                   "description"}
                                 </span>
                               </div>
                               <span className="text-sm font-bold text-on-surface-variant group-hover/item:text-primary transition-colors">
@@ -180,7 +184,11 @@ export default function Header() {
                           >
                             <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                                <span className="material-symbols-outlined text-[18px] text-primary">
-                                  {idx === 0 ? "forest" : idx === 1 ? "factory" : idx === 2 ? "grass" : "bug_report"}
+                                  {sub.name.includes("BRIQ") ? "forest" : 
+                                   sub.name.includes("COAL") ? "factory" : 
+                                   sub.name.includes("FEED") ? "grass" : 
+                                   sub.name.includes("MOSQ") ? "bug_report" : 
+                                   "description"}
                                </span> 
                             </div>
                             {sub.name}
