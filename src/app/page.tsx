@@ -192,6 +192,22 @@ export default function Home() {
                 <a className="font-bold flex items-center gap-2 group-hover:gap-4 transition-all text-primary group-hover:text-white" href="/produk/mosq">Lihat Spesifikasi MOSQ <span className="material-symbols-outlined">chevron_right</span></a>
               </div>
             </div>
+
+            {/* Paper */}
+            <div className="md:col-span-12 bg-surface-container-low border border-primary/20 rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 hover:bg-primary hover:text-white transition-all group overflow-hidden relative">
+              <div className="absolute right-0 top-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-0"></div>
+              <div className="md:w-1/4 flex-shrink-0">
+                 <span className="material-symbols-outlined text-6xl text-primary group-hover:text-primary-fixed">description</span>
+              </div>
+              <div className="md:w-3/4 relative z-10">
+                <h3 className="font-headline font-bold text-3xl">Cocopaper</h3>
+                <p className="text-primary font-bold mt-1 group-hover:text-emerald-200">Binder Organik Industri Kertas & Packaging</p>
+                <p className="mt-4 text-on-surface-variant group-hover:text-white/80 leading-relaxed">Multifungsi: Meningkatkan plybonding (wet-end), performa converting tissue, serta memberikan lapisan water repellent (hydrophobic) pada produk kertas Anda.</p>
+                <div className="mt-6">
+                  <a className="bg-primary text-white group-hover:bg-white group-hover:text-primary px-6 py-3 rounded font-bold inline-flex items-center gap-2 transition-all" href="/produk/paper">Explorasi Cocopaper <span className="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

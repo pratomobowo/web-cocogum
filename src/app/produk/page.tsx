@@ -237,6 +237,90 @@ export default function Produk() {
         </div>
       </section>
 
+      {/* MOSQ */}
+      <section id="mosq" aria-labelledby="mosq-heading" className="py-24 bg-surface">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-low rounded-3xl p-8 lg:p-16 border border-outline-variant/20 shadow-xl overflow-hidden relative">
+            <div className="lg:col-span-8 relative z-10 lg:pr-12">
+              <span className="text-primary font-bold tracking-widest text-sm uppercase">
+                Cocogum MOSQ — Perekat Obat Nyamuk Bakar
+              </span>
+              <h2 id="mosq-heading" className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">
+                Pembakaran Stabil Sepanjang Malam — 100% Organik & Nir-Bau.
+              </h2>
+              <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                Didesain khusus untuk industri obat nyamuk bakar (mosquito coil). Menjamin nyala api merambat stabil (smoldering) tanpa terputus, serta memberikan kekuatan mekanik pada lilitan spiral agar tidak mudah patah.
+              </p>
+              <ul className="space-y-4 mb-10 text-on-surface-variant">
+                <li className="flex gap-4 items-start">
+                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
+                  <span><strong>Nyala Api Stabil:</strong> Memfasilitasi perambatan api yang konstan hingga ke tengah lilitan tanpa padam mendadak.</span>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
+                  <span><strong>100% Tanpa Bau Residu:</strong> Tidak mengeluarkan aroma "sangit" tambahan saat dibakar, menjaga kemurnian wangi insektisida asli.</span>
+                </li>
+              </ul>
+              <a href="/produk/mosq" className="inline-flex items-center gap-3 bg-primary text-white border-2 border-primary hover:bg-transparent hover:text-primary px-8 py-4 rounded-lg font-bold transition-all shadow-lg">
+                Lihat Detail Cocogum MOSQ <span className="material-symbols-outlined text-xl">arrow_forward</span>
+              </a>
+            </div>
+            <div className="lg:col-span-4 rounded-2xl overflow-hidden h-[400px] shadow-2xl">
+              <Image 
+                src="/imagenbanner4.webp"
+                alt="Produksi Obat Nyamuk Bakar dengan Cocogum MOSQ"
+                width={500}
+                height={500}
+                className="h-full w-full object-cover grayscale opacity-80"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PAPER */}
+      <section id="paper" aria-labelledby="paper-heading" className="py-24 bg-surface-container-low">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            <div className="w-full lg:w-5/12">
+              <span className="text-primary font-bold tracking-widest text-sm uppercase">
+                Cocogum PAPER — Perekat Organik Industri Kertas
+              </span>
+              <h2 id="paper-heading" className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">
+                Multifungsi: Plybonding Progresif & Hydrophobic Coating.
+              </h2>
+              <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                Satu solusi terpadu untuk meningkatkan performa kertas dari proses basah (wet-end) hingga finishing. Meningkatkan daya rekat antar lapisan (ply bond) sekaligus memberikan perlindungan permukaan terhadap air.
+              </p>
+              <ul className="space-y-4 mb-10 text-on-surface-variant">
+                <li className="flex gap-4 items-start">
+                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
+                  <span><strong>Meningkatkan Bulkiness:</strong> Memberikan struktur kertas yang lebih tebal dan berisi tanpa menambah berat berlebih.</span>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <span className="material-symbols-outlined text-primary-fixed mt-1">check_circle</span>
+                  <span><strong>Water Repellent:</strong> Memberikan efek hydrophobic yang melindungi kertas dari penetrasi air dan kelembaban.</span>
+                </li>
+              </ul>
+              <a href="/produk/paper" className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-container transition-all shadow-lg">
+                Lihat Spesifikasi Cocopaper <span className="material-symbols-outlined text-xl">arrow_forward</span>
+              </a>
+            </div>
+            <div className="w-full lg:w-7/12 relative">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-outline-variant/10">
+                <Image 
+                  src="/imagebannerproduk.webp"
+                  alt="Industri Kertas menggunakan Cocogum PAPER"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover grayscale opacity-80"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Spesifikasi Mutu */}
       <section aria-labelledby="qa-heading" className="py-24 bg-surface-container-low">
         <div className="max-w-5xl mx-auto px-8">
