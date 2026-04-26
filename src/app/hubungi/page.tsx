@@ -95,6 +95,20 @@ export default function HubungiKami() {
                       +62 851-1726-1988
                     </a>
                   </p>
+                  <p className="text-on-surface-variant leading-relaxed">
+                    <strong className="text-primary font-bold">Helmi</strong><br />
+                    <span className="text-sm">B2B Sales</span><br />
+                    <a href="tel:+62811213525" className="hover:text-primary transition-colors">
+                      +62 811-213525
+                    </a>
+                  </p>
+                  <p className="text-on-surface-variant leading-relaxed">
+                    <strong className="text-primary font-bold">Rheza</strong><br />
+                    <span className="text-sm">B2B Sales</span><br />
+                    <a href="tel:+6281220134334" className="hover:text-primary transition-colors">
+                      +62 812-20134334
+                    </a>
+                  </p>
                 </div>
               </div>
 
