@@ -194,19 +194,33 @@ export default function Home() {
             </div>
 
             {/* Paper */}
-            <div className="md:col-span-12 bg-surface-container-low border border-primary/20 rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 hover:bg-primary hover:text-white transition-all group overflow-hidden relative">
-              <div className="absolute right-0 top-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-0"></div>
-              <div className="md:w-1/4 flex-shrink-0">
-                 <span className="material-symbols-outlined text-6xl text-primary group-hover:text-primary-fixed">description</span>
+            <div className="md:col-span-12 bg-surface-container-low border border-outline-variant/10 rounded-xl p-8 md:p-12 flex flex-col md:flex-row-reverse items-center hover:bg-primary hover:text-white transition-all group overflow-hidden relative min-h-[450px]">
+              <div className="absolute left-0 bottom-0 w-full md:w-1/2 h-full z-0 opacity-20 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-y-0 right-0 bg-gradient-to-l from-surface-container-low group-hover:from-primary to-transparent z-10 w-48 transition-colors"></div>
+                <img
+                  alt="Binder organik Cocogum PAPER untuk industri kertas dan packaging"
+                  className="w-full h-full object-cover grayscale mix-blend-multiply transition-all duration-1000"
+                  src="/imagebannerproduk.webp"
+                />
               </div>
-              <div className="md:w-3/4 relative z-10">
-                <h3 className="font-headline font-bold text-3xl">Cocopaper</h3>
-                <p className="text-primary font-bold mt-1 group-hover:text-emerald-200">Binder Organik Industri Kertas & Packaging</p>
-                <p className="mt-4 text-on-surface-variant group-hover:text-white/80 leading-relaxed">Multifungsi: Meningkatkan plybonding (wet-end), performa converting tissue, serta memberikan lapisan water repellent (hydrophobic) pada produk kertas Anda.</p>
-                <div className="mt-6">
-                  <a className="bg-primary text-white group-hover:bg-white group-hover:text-primary px-6 py-3 rounded font-bold inline-flex items-center gap-2 transition-all" href="/produk/paper">Explorasi Cocopaper <span className="material-symbols-outlined">arrow_forward</span></a>
+              
+              <div className="relative z-10 w-full md:w-1/2 md:pl-12">
+                <div className="bg-primary/10 w-fit p-3 rounded-2xl group-hover:bg-white/20 transition-colors mb-6">
+                  <span className="material-symbols-outlined text-4xl text-primary group-hover:text-white">description</span>
+                </div>
+                <h3 className="font-headline font-bold text-4xl text-on-surface group-hover:text-white">Cocogum PAPER</h3>
+                <p className="text-primary font-bold mt-2 group-hover:text-emerald-200 text-lg">Organic Binder for Paper & Packaging</p>
+                <p className="mt-4 text-on-surface-variant group-hover:text-white/80 leading-relaxed text-lg max-w-xl">
+                  Meningkatkan *ply bond strength* saat kondisi basah (wet-end) hingga memberikan lapisan pelindung *water repellent* pada produk kertas dan packaging Anda.
+                </p>
+                <div className="mt-10">
+                  <a className="bg-primary text-white group-hover:bg-white group-hover:text-primary px-10 py-4 rounded-xl font-bold inline-flex items-center gap-3 transition-all shadow-xl hover:-translate-y-1 active:scale-95" href="/produk/paper">
+                    Detail Spesifikasi PAPER <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  </a>
                 </div>
               </div>
+              
+              <div className="hidden md:block w-1/2"></div>
             </div>
           </div>
         </div>
