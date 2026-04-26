@@ -214,7 +214,7 @@ export default function Home() {
                   Meningkatkan *ply bond strength* saat kondisi basah (wet-end) hingga memberikan lapisan pelindung *water repellent* pada produk kertas dan packaging Anda.
                 </p>
                 <div className="mt-10">
-                  <a className="bg-primary text-white group-hover:bg-white group-hover:text-primary px-10 py-4 rounded-xl font-bold inline-flex items-center gap-3 transition-all shadow-xl hover:-translate-y-1 active:scale-95" href="/produk/paper">
+                  <a className="bg-primary text-white group-hover:bg-white group-hover:text-primary px-10 py-4 rounded-xl font-bold inline-flex items-center gap-3 transition-all shadow-xl hover:-translate-y-1 active:scale-95" href="/produk/cocopaper">
                     Detail Spesifikasi PAPER <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </a>
                 </div>

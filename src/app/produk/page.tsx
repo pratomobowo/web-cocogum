@@ -279,14 +279,14 @@ export default function Produk() {
       </section>
 
       {/* PAPER */}
-      <section id="paper" aria-labelledby="paper-heading" className="py-24 bg-surface-container-low">
+      <section id="paper" aria-labelledby="cocopaper-heading" className="py-24 bg-surface-container-low">
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-5/12">
               <span className="text-primary font-bold tracking-widest text-sm uppercase">
                 Cocogum PAPER — Perekat Organik Industri Kertas
               </span>
-              <h2 id="paper-heading" className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">
+              <h2 id="cocopaper-heading" className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface mt-4 mb-6">
                 Multifungsi: Plybonding Progresif & Hydrophobic Coating.
               </h2>
               <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
@@ -302,7 +302,7 @@ export default function Produk() {
                   <span><strong>Water Repellent:</strong> Memberikan efek hydrophobic yang melindungi kertas dari penetrasi air dan kelembaban.</span>
                 </li>
               </ul>
-              <a href="/produk/paper" className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-container transition-all shadow-lg">
+              <a href="/produk/cocopaper" className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-container transition-all shadow-lg">
                 Lihat Spesifikasi Cocopaper <span className="material-symbols-outlined text-xl">arrow_forward</span>
               </a>
             </div>

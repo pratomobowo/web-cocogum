@@ -39,7 +39,7 @@ export default function Header() {
         { name: "Cocogum COAL", href: "/produk/coal" },
         { name: "Cocogum FEED", href: "/produk/feed" },
         { name: "Cocogum MOSQ", href: "/produk/mosq" },
-        { name: "Cocogum PAPER", href: "/produk/paper" },
+        { name: "Cocopaper", href: "/produk/cocopaper" },
       ]
     },
     { name: "Teknologi", href: "/teknologi" },

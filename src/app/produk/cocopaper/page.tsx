@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Solusi binder organik inovatif untuk industri kertas. Meningkatkan kekuatan plybonding (wet-end), performa converting (tissue), serta memberikan lapisan water repellent hydrophobic.",
   alternates: {
-    canonical: "https://cocogum.com/produk/paper",
+    canonical: "https://cocogum.com/produk/cocopaper",
   },
   openGraph: {
     title: "Cocogum PAPER — Multifunction Organic Binder for Paper Industry",
     description:
       "Tingkatkan bulkiness dan kekuatan kertas Anda dari proses wet-end hingga finishing. Solusi terpadu untuk efisiensi produksi kertas dan packaging tahan air.",
-    url: "https://cocogum.com/produk/paper",
+    url: "https://cocogum.com/produk/cocopaper",
   },
 };
 
