@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Cocogum PAPER — Perekat Organik Multifungsi Industri Kertas",
+  title: "Cocopaper — Perekat Organik Multifungsi Industri Kertas",
   description:
     "Solusi binder organik inovatif untuk industri kertas. Meningkatkan kekuatan plybonding (wet-end), performa converting (tissue), serta memberikan lapisan water repellent hydrophobic.",
   alternates: {
     canonical: "https://cocogum.id/produk/cocopaper",
   },
   openGraph: {
-    title: "Cocogum PAPER — Multifunction Organic Binder for Paper Industry",
+    title: "Cocopaper — Multifunction Organic Binder for Paper Industry",
     description:
       "Tingkatkan bulkiness dan kekuatan kertas Anda dari proses wet-end hingga finishing. Solusi terpadu untuk efisiensi produksi kertas dan packaging tahan air.",
     url: "https://cocogum.id/produk/cocopaper",
@@ -24,10 +24,10 @@ export default function ProdukPaper() {
       <section className="relative w-full h-[80vh] min-h-[600px] bg-black group overflow-hidden">
         <div className="absolute inset-0 bg-black z-0 overflow-hidden">
            <Image
-             src={"/imagebannerproduk.webp"}
-             fill
-             className="object-cover opacity-65 grayscale-[20%]"
-             alt="Perekat Industri Kertas Cocogum PAPER"
+              src={"/herosectioncocopaper.webp"}
+              fill
+              className="object-cover opacity-65 grayscale-[20%]"
+              alt="Perekat Industri Kertas Cocopaper"
              priority={true}
              sizes="100vw"
            />
@@ -47,7 +47,7 @@ export default function ProdukPaper() {
             </div>
             
             <h1 className="font-headline font-extrabold text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.1] mb-8 drop-shadow-xl filter">
-              Cocogum PAPER. <br />
+              Cocopaper. <br />
               <span className="text-primary-fixed">Perekat Cerdas Industri Kertas.</span>
             </h1>
             
@@ -60,7 +60,7 @@ export default function ProdukPaper() {
                 href="/hubungi"
                 className="bg-primary hover:bg-primary-container text-white px-8 py-4 font-bold rounded-xl transition-all shadow-2xl flex items-center gap-2 group/btn active:scale-95 duration-200"
               >
-                Minta Sampel PAPER <span className="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+                Minta Sampel Cocopaper <span className="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
               </Link>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function ProdukPaper() {
             <span className="text-sm font-bold tracking-widest text-primary uppercase mb-4 block">Sustainable Innovation</span>
             <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface mb-6">Meningkatkan Performa Tanpa Melukai Ekosistem</h2>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-6">
-              Industri kertas modern menghadapi tekanan ganda: tuntutan kekuatan produk yang lebih tinggi dan regulasi penggunaan bahan kimia yang lebih ketat. Cocogum PAPER menjawab keduanya.
+              Industri kertas modern menghadapi tekanan ganda: tuntutan kekuatan produk yang lebih tinggi dan regulasi penggunaan bahan kimia yang lebih ketat. Cocopaper menjawab keduanya.
             </p>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
               Bahan dasar organik kami memastikan residu produksi Anda tetap ramah lingkungan (<em>bio-degradable</em>), sementara teknologi pengikatan polimernya memberikan struktur kertas yang lebih "naik" dan ringan—sempurna untuk produk yang membutuhkan kombinasi volume dan kekuatan.
@@ -154,7 +154,7 @@ export default function ProdukPaper() {
             <div className="aspect-square rounded-full overflow-hidden border-[12px] border-surface shadow-2xl relative">
               <Image 
                 src="/imagebannerteknologi.webp"
-                alt="Proses Plybonding Kertas dengan Cocogum PAPER"
+                alt="Proses Plybonding Kertas dengan Cocopaper"
                 fill
                 className="object-cover transition-transform duration-[3s] hover:scale-110"
               />
@@ -179,7 +179,7 @@ export default function ProdukPaper() {
                     href="/hubungi"
                     className="bg-primary text-white px-8 py-4 font-bold rounded-lg hover:bg-primary-container transition-all shadow-lg flex justify-center items-center gap-2 group"
                 >
-                    Konsultasi Formulasi PAPER <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    Konsultasi Formulasi Cocopaper <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </Link>
                 <Link
                     href="/produk"

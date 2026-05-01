@@ -1,7 +1,10 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+"use client";
 
-export const metadata: Metadata = {
+import { useState, FormEvent } from "react";
+import Image from "next/image";
+import Head from "next/head";
+
+const metadata = {
   title: "Hubungi Cocogum — Konsultasi Perekat Organik Briket, Pakan & Tambang | Bandung",
   description:
     "Hubungi tim Cocogum untuk konsultasi kebutuhan perekat organik (binder) briket arang ekspor, pakan ikan & udang, atau coal fines tambang batubara. Kantor di Baleendah, Kabupaten Bandung, Jawa Barat.",
@@ -17,6 +20,30 @@ export const metadata: Metadata = {
 };
 
 export default function HubungiKami() {
+  const [formData, setFormData] = useState({
+    nama: "",
+    email: "",
+    industri: "Pabrik Briket Arang Batok Kelapa",
+    produk: "Cocogum BRIQ — Perekat Briket Arang",
+    pesan: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+
+    const message = `Halo Admin Cocogum,%0A%0ASaya ${formData.nama || "(belum diisi)"} ingin meminta penawaran perekat organik.%0A%0ADetail:%0A• Nama: ${formData.nama || "-"}%0A• Email: ${formData.email || "-"}%0A• Industri: ${formData.industri}%0A• Produk yang Dibutuhkan: ${formData.produk}%0A• Kebutuhan & Spesifikasi: ${formData.pesan || "-"}%0A%0AMohon informasi lebih lanjut. Terima kasih.`;
+
+    const whatsappUrl = `https://wa.me/6285117261988?text=${message}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <>
       {/* Hero Section (Beranda Aesthetic) */}
@@ -171,16 +198,19 @@ export default function HubungiKami() {
                 dengan spesifikasi mesin dan kebutuhan produksi pabrik Anda.
               </p>
 
-              <form action="#" className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
                     <label htmlFor="nama" className="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Nama Lengkap</label>
                     <input
                       id="nama"
                       name="nama"
+                      value={formData.nama}
+                      onChange={handleChange}
                       className="bg-surface-container-high border-b-2 border-outline/20 focus:border-primary focus:ring-0 px-4 py-3 text-on-surface rounded-t-md transition-all outline-none"
                       placeholder="Nama Anda"
                       type="text"
+                      required
                     />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -188,6 +218,8 @@ export default function HubungiKami() {
                     <input
                       id="email"
                       name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="bg-surface-container-high border-b-2 border-outline/20 focus:border-primary focus:ring-0 px-4 py-3 text-on-surface rounded-t-md transition-all outline-none"
                       placeholder="nama@perusahaan.com"
                       type="email"
@@ -201,6 +233,8 @@ export default function HubungiKami() {
                     <select
                       id="industri"
                       name="industri"
+                      value={formData.industri}
+                      onChange={handleChange}
                       className="bg-surface-container-high border-b-2 border-outline/20 focus:border-primary focus:ring-0 px-4 py-3 text-on-surface rounded-t-md transition-all appearance-none outline-none"
                     >
                       <option>Pabrik Briket Arang Batok Kelapa</option>
@@ -216,6 +250,8 @@ export default function HubungiKami() {
                     <select
                       id="produk"
                       name="produk"
+                      value={formData.produk}
+                      onChange={handleChange}
                       className="bg-surface-container-high border-b-2 border-outline/20 focus:border-primary focus:ring-0 px-4 py-3 text-on-surface rounded-t-md transition-all appearance-none outline-none"
                     >
                       <option>Cocogum BRIQ — Perekat Briket Arang</option>
@@ -228,10 +264,12 @@ export default function HubungiKami() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="pesan" className="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Kebutuhan & Spesifikasi Mesin</label>
+                  <label htmlFor="pesan" className="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Kebutuhan &amp; Spesifikasi Mesin</label>
                   <textarea
                     id="pesan"
                     name="pesan"
+                    value={formData.pesan}
+                    onChange={handleChange}
                     className="bg-surface-container-high border-b-2 border-outline/20 focus:border-primary focus:ring-0 px-4 py-3 text-on-surface rounded-t-md transition-all outline-none"
                     placeholder="Jelaskan kebutuhan perekat Anda: jenis mesin, target kapasitas produksi per hari, spesifikasi produk akhir (kadar air, kekuatan briket/pelet), dan estimasi volume kebutuhan binder per bulan..."
                     rows={5}
@@ -241,14 +279,13 @@ export default function HubungiKami() {
                 <div className="pt-4">
                   <button
                     className="w-full bg-primary text-on-primary py-4 rounded-lg font-bold tracking-tight hover:bg-primary-container transition-all flex items-center justify-center gap-2 transform active:scale-[0.99]"
-                    type="button"
+                    type="submit"
                   >
-                    Kirim Permintaan Penawaran Perekat Organik
+                    Kirim ke WhatsApp Admin
                     <span className="material-symbols-outlined">arrow_forward</span>
                   </button>
                   <p className="text-xs text-on-surface-variant mt-4 text-center">
-                    Dengan mengirimkan form ini, Anda menyetujui Kebijakan Privasi Cocogum. Kami akan
-                    menghubungi Anda dalam 1×24 jam kerja.
+                    Data akan otomatis menjadi pesan WhatsApp. Anda tinggal mengirimkannya ke admin Cocogum.
                   </p>
                 </div>
               </form>
