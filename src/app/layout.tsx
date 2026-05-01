@@ -94,15 +94,27 @@ export default function RootLayout({
         "contactPoint": [
           {
             "@type": "ContactPoint",
-            "telephone": "+6285933885",
+            "telephone": "+6289694479028",
             "contactType": "customer service",
-            "name": "Novy Larasati — Secretary Manager"
+            "name": "Novy Larasati — Sales Secretary Manager"
           },
           {
             "@type": "ContactPoint",
             "telephone": "+6285117261988",
             "contactType": "sales",
-            "name": "Krisna Jembawan — Business Development Manager"
+            "name": "Krisna Jembawan — National Sales Manager"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+62811213525",
+            "contactType": "sales",
+            "name": "Helmi F — Regional Sales Manager"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+6281220134334",
+            "contactType": "sales",
+            "name": "Rheza — Regional Sales Manager"
           }
         ],
         "email": "pelanginalfaabadi@gmail.com"

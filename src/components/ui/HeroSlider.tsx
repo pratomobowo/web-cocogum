@@ -93,9 +93,9 @@ export default function HeroSlider() {
                     {data.tagline}
                   </span>
                 </div>
-                <h1 className="font-headline font-extrabold text-5xl md:text-6xl text-white tracking-tight leading-[1.15] mb-6 drop-shadow-xl filter">
+                <div className="font-headline font-extrabold text-5xl md:text-6xl text-white tracking-tight leading-[1.15] mb-6 drop-shadow-xl filter" role="heading" aria-level={1}>
                   {data.title}
-                </h1>
+                </div>
                 <p className="text-on-primary-container text-lg md:text-xl mb-10 leading-relaxed font-light max-w-xl">
                   {data.description}
                 </p>
@@ -104,13 +104,13 @@ export default function HeroSlider() {
                     href={data.linkUrl}
                     className="bg-primary-fixed text-on-primary-fixed px-8 py-4 font-bold rounded hover:bg-white transition-all transform active:scale-95 duration-200 shadow-2xl flex items-center gap-2 group/btn"
                   >
-                    Pelajari Solusi <span className="material-symbols-outlined text-xl transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+                    Lihat Solusi Perekat <span className="material-symbols-outlined text-xl transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
                   </Link>
                   <Link
                     href="/hubungi"
                     className="border border-white/20 bg-black/10 backdrop-blur-md text-white px-8 py-4 font-bold rounded hover:bg-white/10 transition-all flex items-center gap-2"
                   >
-                    Konsultasi B2B
+                    Konsultasi Gratis
                   </Link>
                 </div>
               </div>

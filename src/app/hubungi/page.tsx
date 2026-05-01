@@ -80,34 +80,53 @@ export default function HubungiKami() {
                   <span className="material-symbols-outlined">person</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-primary mb-1">Tim Sales & Business Development</h3>
+                  <h3 className="font-bold text-primary mb-1">Tim Manajemen & Sales</h3>
+                  
+                  <p className="text-on-surface-variant leading-relaxed mb-4">
+                    <strong className="text-primary font-bold">Neneng Fatimah</strong><br />
+                    <span className="text-sm">Chief Executive Officer</span>
+                  </p>
+                  
                   <p className="text-on-surface-variant leading-relaxed mb-4">
                     <strong className="text-primary font-bold">Novy Larasati</strong><br />
-                    <span className="text-sm">Secretary Manager — Cocogum Bandung</span><br />
-                    <a href="tel:+6285933885" className="hover:text-primary transition-colors">
-                      +62 859-33885
+                    <span className="text-sm">Sales Secretary Manager — Cocogum Bandung</span><br />
+                    <a href="tel:+6289694479028" className="hover:text-primary transition-colors">
+                      +62 896 9447 9028
                     </a>
                   </p>
-                  <p className="text-on-surface-variant leading-relaxed">
+                  
+                  <p className="text-on-surface-variant leading-relaxed mb-4">
                     <strong className="text-primary font-bold">Krisna Jembawan</strong><br />
-                    <span className="text-sm">Business Development Manager — Perekat Organik & Ekspor</span><br />
+                    <span className="text-sm">National Sales Manager — Cocogum Perekat Organik & Ekspor</span><br />
                     <a href="tel:+6285117261988" className="hover:text-primary transition-colors">
                       +62 851-1726-1988
                     </a>
                   </p>
-                  <p className="text-on-surface-variant leading-relaxed">
-                    <strong className="text-primary font-bold">Helmi</strong><br />
-                    <span className="text-sm">B2B Sales</span><br />
+                  
+                  <p className="text-on-surface-variant leading-relaxed mb-4">
+                    <strong className="text-primary font-bold">Helmi F</strong><br />
+                    <span className="text-sm">Regional Sales Manager</span><br />
                     <a href="tel:+62811213525" className="hover:text-primary transition-colors">
                       +62 811-213525
                     </a>
                   </p>
-                  <p className="text-on-surface-variant leading-relaxed">
+                  
+                  <p className="text-on-surface-variant leading-relaxed mb-4">
                     <strong className="text-primary font-bold">Rheza</strong><br />
-                    <span className="text-sm">B2B Sales</span><br />
+                    <span className="text-sm">Regional Sales Manager</span><br />
                     <a href="tel:+6281220134334" className="hover:text-primary transition-colors">
                       +62 812-20134334
                     </a>
+                  </p>
+                  
+                  <p className="text-on-surface-variant leading-relaxed mb-4">
+                    <strong className="text-primary font-bold">Ronal S</strong><br />
+                    <span className="text-sm">Business Development Manager</span>
+                  </p>
+                  
+                  <p className="text-on-surface-variant leading-relaxed">
+                    <strong className="text-primary font-bold">Sandy</strong><br />
+                    <span className="text-sm">R&D Manager</span>
                   </p>
                 </div>
               </div>

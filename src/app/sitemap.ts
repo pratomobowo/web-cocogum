@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cocogum.id'
+  const baseUrl = 'https://cocogum.com'
   
   const routes = [
     '',

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import HeroSlider from "@/components/ui/HeroSlider";
 
 export const metadata: Metadata = {
-  title: "Cocogum | Supplier Perekat Organik Briket Arang, Pakan Ikan & Coal Fines Indonesia",
+  title: "Cocogum | Supplier Perekat Organik Briket, Pakan & Coal Fines",
   description:
-    "Cocogum menyediakan perekat organik (binder) berkualitas ekspor untuk pabrik briket arang batok kelapa shisha, pakan ikan & udang, serta coal fines tambang batubara. Bebas formaldehida. Pabrik di Bandung, Jawa Barat.",
+    "Supplier perekat organik (binder) kelas ekspor untuk briket arang, pakan ikan & udang, dan coal fines. Bebas formaldehida. Pabrik di Bandung.",
   alternates: {
     canonical: "https://cocogum.com",
   },
@@ -58,7 +58,7 @@ export default function Home() {
             </div>
             <div className="bg-primary rounded-2xl overflow-hidden aspect-[4/5] relative shadow-2xl">
               <img
-                alt="Proses produksi perekat organik Cocogum berbasis bahan alami batok kelapa di pabrik Bandung"
+                alt="Produksi perekat organik Cocogum berbasis batok kelapa di pabrik Bandung"
                 className="w-full h-full object-cover opacity-60 mix-blend-screen"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZjOqEZ8DkOdt-A92CdC8d9w_OlDrle031Ybv-SP5K1m1GxBzmGErQRcQhtcmZ52ZmsTvRNNX1I0ACNiE4S2n1neb6J3cQAuoKT25Fi24KGUOu2n6hIPedn-OCImW1La-6KdkfXAuA533lBc7WWBtNXK1OGadbVJ4lXClLs8PzA6DwM3H9GCPNG9DVFQZGCV3s7xWUfAPZFB3sKc-Wq9wPwrEzf-3BdL8mNWEFT6LW_CguaszEb-AZrptfHcUc_TKCpjoxy-BAr40"
               />
@@ -111,7 +111,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-2xl">
-              <span className="text-sm font-bold tracking-widest text-primary uppercase mb-4 block">Lini Produk Organik Binder</span>
+              <span className="text-sm font-bold tracking-widest text-primary uppercase mb-4 block">Lini Produk Binder Organik</span>
               <h2 id="produk-heading" className="font-headline font-bold text-4xl text-on-surface mb-4">
                 Solusi Perekat Organik untuk Briket, Pakan Ternak &amp; Tambang
               </h2>
@@ -209,7 +209,7 @@ export default function Home() {
                   <span className="material-symbols-outlined text-4xl text-primary group-hover:text-white">description</span>
                 </div>
                 <h3 className="font-headline font-bold text-4xl text-on-surface group-hover:text-white">Cocogum PAPER</h3>
-                <p className="text-primary font-bold mt-2 group-hover:text-emerald-200 text-lg">Organic Binder for Paper & Packaging</p>
+                <p className="text-primary font-bold mt-2 group-hover:text-emerald-200 text-lg">Binder Organik untuk Kertas &amp; Packaging</p>
                 <p className="mt-4 text-on-surface-variant group-hover:text-white/80 leading-relaxed text-lg max-w-xl">
                   Meningkatkan *ply bond strength* saat kondisi basah (wet-end) hingga memberikan lapisan pelindung *water repellent* pada produk kertas dan packaging Anda.
                 </p>
@@ -234,7 +234,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 relative rounded-2xl overflow-hidden group">
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
               <img
-                alt="Instalasi mesin pabrik briket arang menggunakan perekat organik Cocogum BRIQ tanpa modifikasi hardware"
+                alt="Mesin briket arang menggunakan perekat organik Cocogum tanpa modifikasi"
                 className="w-full aspect-video object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700"
                 src="/imagebricketcocogum.webp"
               />
@@ -283,6 +283,74 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Product Schema untuk SEO Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "ItemList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Cocogum BRIQ",
+                      "description": "Perekat organik untuk briket arang batok kelapa ekspor. Pangkas waktu oven 50%, bebas asap, 95% fixed carbon.",
+                      "brand": { "@type": "Brand", "name": "Cocogum" },
+                      "category": "Industrial Binder",
+                      "offers": {
+                        "@type": "Offer",
+                        "availability": "https://schema.org/InStock",
+                        "priceCurrency": "IDR",
+                        "seller": { "@type": "Organization", "name": "Cocogum" }
+                      }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Cocogum COAL",
+                      "description": "Binder organik untuk coal fines dan debu batubara. Ubah limbah tambang menjadi briket energi kalori tinggi.",
+                      "brand": { "@type": "Brand", "name": "Cocogum" },
+                      "category": "Mining Binder",
+                      "offers": {
+                        "@type": "Offer",
+                        "availability": "https://schema.org/InStock",
+                        "priceCurrency": "IDR",
+                        "seller": { "@type": "Organization", "name": "Cocogum" }
+                      }
+                    }
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                      "@type": "Product",
+                      "name": "Cocogum FEED",
+                      "description": "Perekat pelet pakan ikan, udang, dan unggas organik. Pelet tidak hancur di air, bebas toksin.",
+                      "brand": { "@type": "Brand", "name": "Cocogum" },
+                      "category": "Feed Binder",
+                      "offers": {
+                        "@type": "Offer",
+                        "availability": "https://schema.org/InStock",
+                        "priceCurrency": "IDR",
+                        "seller": { "@type": "Organization", "name": "Cocogum" }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          })
+        }}
+      />
     </>
   );
 }
