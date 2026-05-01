@@ -8,10 +8,10 @@ export default function StudiKasus() {
       <section className="relative w-full h-[80vh] min-h-[600px] bg-black group overflow-hidden">
         <div className="absolute inset-0 bg-black z-0 overflow-hidden">
            <Image
-             src={"/imagenbanner4.webp"}
-             fill
-             className="object-cover opacity-65"
-             alt="Studi Kasus Cocogum"
+              src={"/imagebannerteknologi.webp"}
+              fill
+              className="object-cover opacity-65"
+              alt="Studi Kasus Implementasi Cocogum"
              priority={true}
              sizes="100vw"
            />
@@ -45,7 +45,7 @@ export default function StudiKasus() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
              <div className="order-2 lg:order-1 relative">
                 <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-2xl opacity-10"></div>
-                <img alt="Fasilitas Briket" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM50B0UD4q4tnXufehxkMZVSvG4wuTz1GAQrmWxWKEwS_GhFL4B6iVeRDi1_LZ_yLAc1-HhjC6lJg0tH3rvnN_y2PX7YUbhRh9mHCJxJ5miEw5tIQ5KwdHA3yuga-LAeeuZWPOIBVH12Z-NTRPQKmUrSqP37OHoFgmsHHRoxyim8cw0T5zXSwJq15bvyzqWZRilPVyPshtMU_4soYAMF5susnN8AAoALbMragrf_fYobWWBDa-wiIuJSO9cvI2kNCCIWclz0LqTKw" />
+                 <img alt="Fasilitas Briket Arang dengan Cocogum BRIQ" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="/imagebricketcocogum.webp" />
              </div>
              <div className="order-1 lg:order-2">
                 <span className="text-sm font-bold tracking-widest text-primary uppercase mb-3 block">SEKTOR PEMANAS BOILER & HORECA</span>
@@ -99,41 +99,105 @@ export default function StudiKasus() {
              </div>
              <div className="relative">
                 <div className="absolute inset-0 bg-primary -translate-x-4 translate-y-4 rounded-2xl opacity-10"></div>
-                <img alt="Fasilitas Aqua-feed" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtRua1vEdWz65dVnwVJiUFp4rqUmMkUs5bGW1PAYTilz3bzRCw9IhpYTe-w9O8YuOFIDqxSC3nimXwskkJmbLd6YTMOPCokl78HJNpysipbkk22GE6r7wuDGkJVpIIWuIu4WaWCSQsepKp2f4ljWnO25XhbGPaVMcvvV5-o9MKsCUceT5uzyo5RoanP4U1G7opMGULCXyVtjJjs74S1A1lPoznK1wQKzqXyStk96vRSyvDIJ7lCNsRdCUhifXWg1d65_2idiUG2F0" />
+                 <img alt="Fasilitas Aqua-feed dengan Cocogum FEED" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="/imagehero3.webp" />
              </div>
           </div>
 
-          <hr className="border-outline-variant/10" />
+           <hr className="border-outline-variant/10" />
 
-          {/* Studi Kasus 03: Coal (Tambang Logistik) */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-             <div className="order-2 lg:order-1 relative">
-                <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-2xl opacity-10"></div>
-                <img alt="Logistik Batubara" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="/imagecoal.webp" />
-             </div>
-             <div className="order-1 lg:order-2">
-                <span className="text-sm font-bold tracking-widest text-primary uppercase mb-3 block">SEKTOR LOGISTIK RAW MATERIAL</span>
-                <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface mb-6">Navigasi Regulasi ESG Lewat Penekan Debu Industri</h2>
-                <p className="text-on-surface-variant text-lg leading-relaxed mb-6">
-                  <strong>Tantangan:</strong> Fasilitas pemuatan pelabuhan kargo (*bulk loading*) terus digempur regulasi lingkungan ekstrateritorial karena tebaran debu silika (*dust dispersion*) di udara sangat mencekik jarak pandang pekerja logistik dan mengancam keamanan K3 paru-paru.
-                </p>
-                <div className="bg-surface-container-low p-6 rounded-xl border-l-[4px] border-primary mb-6">
-                   <h4 className="font-bold text-primary mb-2">Intervensi Cocogum (Seri Coal)</h4>
-                   <p className="text-on-surface-variant text-sm">Dispersi pelapis <em>anti-dust suppressant</em> botani organik kita dikabutkan pada laju *conveyor* pemuatan, dengan agresif mengaglomerasi (menggumpalkan) partikel tersuspensi berukuran ekstrem (<strong className="text-on-surface">&lt; 5 micron</strong>).</p>
-                </div>
-                <div className="flex gap-4 mb-4">
-                  <div className="bg-surface-container-lowest border border-outline-variant/20 px-4 py-3 rounded shadow-sm w-1/2">
-                    <span className="text-xs font-bold text-on-surface-variant uppercase tracking-wider block mb-1">LAPORAN ESG</span>
-                    <span className="text-2xl font-black text-primary">Sesuai (CBAM)</span>
-                  </div>
-                  <div className="bg-surface-container-lowest border border-outline-variant/20 px-4 py-3 rounded shadow-sm w-1/2">
-                    <span className="text-xs font-bold text-on-surface-variant uppercase tracking-wider block mb-1">KEAMANAN NAFAS</span>
-                    <span className="text-2xl font-black text-primary">100% Bebas VOC</span>
-                  </div>
-                </div>
-                <p className="text-sm text-on-surface-variant/80 italic font-medium">Hasil Akhir: Skor ESG logistik terlindungi kuat; polusi partikel menurun tajam di zona pelabuhan transit ekspor.</p>
-             </div>
-          </div>
+           {/* Studi Kasus 03: Coal (Tambang Logistik) */}
+           <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="order-2 lg:order-1 relative">
+                 <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-2xl opacity-10"></div>
+                 <img alt="Logistik Batubara" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="/imagecoal.webp" />
+              </div>
+              <div className="order-1 lg:order-2">
+                 <span className="text-sm font-bold tracking-widest text-primary uppercase mb-3 block">SEKTOR LOGISTIK RAW MATERIAL</span>
+                 <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface mb-6">Navigasi Regulasi ESG Lewat Penekan Debu Industri</h2>
+                 <p className="text-on-surface-variant text-lg leading-relaxed mb-6">
+                    <strong>Tantangan:</strong> Fasilitas pemuatan pelabuhan kargo (*bulk loading*) terus digempur regulasi lingkungan ekstrateritorial karena tebaran debu silika (*dust dispersion*) di udara sangat mencekik jarak pandang pekerja logistik dan mengancam keamanan K3 paru-paru.
+                 </p>
+                 <div className="bg-surface-container-low p-6 rounded-xl border-l-[4px] border-primary mb-6">
+                    <h4 className="font-bold text-primary mb-2">Intervensi Cocogum (Seri Coal)</h4>
+                    <p className="text-on-surface-variant text-sm">Dispersi pelapis <em>anti-dust suppressant</em> botani organik kita dikabutkan pada laju *conveyor* pemuatan, dengan agresif mengaglomerasi (menggumpalkan) partikel tersuspensi berukuran ekstrem (<strong className="text-on-surface">&lt; 5 micron</strong>).</p>
+                 </div>
+                 <div className="flex gap-4 mb-4">
+                   <div className="bg-surface-container-lowest border border-outline-variant/20 px-4 py-3 rounded shadow-sm w-1/2">
+                     <span className="text-xs font-bold text-on-surface-variant uppercase tracking-wider block mb-1">LAPORAN ESG</span>
+                     <span className="text-2xl font-black text-primary">Sesuai (CBAM)</span>
+                   </div>
+                   <div className="bg-surface-container-lowest border border-outline-variant/20 px-4 py-3 rounded shadow-sm w-1/2">
+                     <span className="text-xs font-bold text-on-surface-variant uppercase tracking-wider block mb-1">KEAMANAN NAFAS</span>
+                     <span className="text-2xl font-black text-primary">100% Bebas VOC</span>
+                   </div>
+                 </div>
+                 <p className="text-sm text-on-surface-variant/80 italic font-medium">Hasil Akhir: Skor ESG logistik terlindungi kuat; polusi partikel menurun tajam di zona pelabuhan transit ekspor.</p>
+              </div>
+           </div>
+
+           <hr className="border-outline-variant/10" />
+
+           {/* Studi Kasus 04: MOSQ (Obat Nyamuk Bakar) */}
+           <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                 <span className="text-sm font-bold tracking-widest text-primary uppercase mb-3 block">SEKTOR PRODUK RUMAH TANGGA</span>
+                 <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface mb-6">Pembakaran Stabil 8 Jam Tanpa Patah & Nir-Bau</h2>
+                 <p className="text-on-surface-variant text-lg leading-relaxed mb-6">
+                    <strong>Tantangan:</strong> Pabrik obat nyamuk bakar konvensional mengalami tingkat reject tinggi akibat lilitan spiral yang rapuh dan mudah patah saat pengemasan. Pembakaran sering terputus di tengah jalan, sisa residu binder yang tidak terbakar sempurna menimbulkan bau "sengit" yang mengganggu konsumen.
+                 </p>
+                 <div className="bg-surface-container-low p-6 rounded-xl border-l-[4px] border-primary mb-6">
+                    <h4 className="font-bold text-primary mb-2">Intervensi Cocogum (Seri MOSQ)</h4>
+                    <p className="text-on-surface-variant text-sm">Formulasi binder organik khusus untuk mosquito coil memberikan kekuatan mekanik pada serat lilitan spiral sekaligus memfasilitasi perambatan api smoldering yang konstan dari ujung ke pusat tanpa padam mendadak.</p>
+                 </div>
+                 <div className="flex gap-4 mb-4">
+                   <div className="bg-surface-container-lowest border border-outline-variant/20 px-4 py-3 rounded shadow-sm w-1/2">
+                     <span className="text-xs font-bold text-on-surface-variant uppercase tracking-wider block mb-1">KEKUATAN MEKANIK</span>
+                     <span className="text-2xl font-black text-primary">Nir-Patah</span>
+                   </div>
+                   <div className="bg-surface-container-lowest border border-outline-variant/20 px-4 py-3 rounded shadow-sm w-1/2">
+                     <span className="text-xs font-bold text-on-surface-variant uppercase tracking-wider block mb-1">DURASI BAKAR</span>
+                     <span className="text-2xl font-black text-primary">8+ Jam Stabil</span>
+                   </div>
+                 </div>
+                 <p className="text-sm text-on-surface-variant/80 italic font-medium">Hasil Akhir: Lilitan spiral kokoh, pembakaran stabil sepanjang malam tanpa bau residu yang mengganggu kemurnian insektisida.</p>
+              </div>
+              <div className="relative">
+                 <div className="absolute inset-0 bg-primary -translate-x-4 translate-y-4 rounded-2xl opacity-10"></div>
+                 <img alt="Produksi Obat Nyamuk Bakar MOSQ" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="/imagenbanner4.webp" />
+              </div>
+           </div>
+
+           <hr className="border-outline-variant/10" />
+
+           {/* Studi Kasus 05: Cocopaper (Industri Kertas) */}
+           <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="order-2 lg:order-1 relative">
+                 <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-2xl opacity-10"></div>
+                 <img alt="Industri Kertas dengan Cocopaper" className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-xl grayscale-[30%] border border-outline-variant/20" src="/herosectioncocopaper.webp" />
+              </div>
+              <div className="order-1 lg:order-2">
+                 <span className="text-sm font-bold tracking-widest text-primary uppercase mb-3 block">SEKTOR MANUFAKTUR KERTAS</span>
+                 <h2 className="text-3xl lg:text-4xl font-headline font-bold text-on-surface mb-6">Plybonding Kuat & Hydrophobic Coating dalam Satu Solusi</h2>
+                 <p className="text-on-surface-variant text-lg leading-relaxed mb-6">
+                    <strong>Tantangan:</strong> Pabrik kertas multi-ply menghadapi masalah delaminasi lapisan saat kondisi basah (wet-end), sementara produsen packaging makanan kesulitan mencari coating anti-air yang food-grade dan ramah lingkungan tanpa melapisi plastik laminasi tambahan.
+                 </p>
+                 <div className="bg-surface-container-low p-6 rounded-xl border-l-[4px] border-primary mb-6">
+                    <h4 className="font-bold text-primary mb-2">Intervensi Cocogum (Seri Cocopaper)</h4>
+                    <p className="text-on-surface-variant text-sm">Binder organik Cocopaper bekerja ganda: meningkatkan <em>ply bond strength</em> antar lapisan kertas saat proses basah sekaligus memberikan lapisan <em>water repellent</em> hydrophobic pada permukaan akhir — tanpa tambahan bahan kimia sintetis.</p>
+                 </div>
+                 <div className="flex gap-4 mb-4">
+                   <div className="bg-surface-container-lowest border border-outline-variant/20 px-4 py-3 rounded shadow-sm w-1/2">
+                     <span className="text-xs font-bold text-on-surface-variant uppercase tracking-wider block mb-1">PLY BOND</span>
+                     <span className="text-2xl font-black text-primary">+40% Kekuatan</span>
+                   </div>
+                   <div className="bg-surface-container-lowest border border-outline-variant/20 px-4 py-3 rounded shadow-sm w-1/2">
+                     <span className="text-xs font-bold text-on-surface-variant uppercase tracking-wider block mb-1">WATER RESISTANCE</span>
+                     <span className="text-2xl font-black text-primary">Hydrophobic</span>
+                   </div>
+                 </div>
+                 <p className="text-sm text-on-surface-variant/80 italic font-medium">Hasil Akhir: Kertas lebih bulky dan kuat, packaging tahan air tanpa plastik laminasi, 100% biodegradable.</p>
+              </div>
+           </div>
 
         </div>
       </section>
