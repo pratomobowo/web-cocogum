@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Perekat organik (pellet binder) untuk pakan akuatik & unggas. 100% Non-toxic bebas formaldehida. Mencegah pakan hancur di air dan meningkatkan konversi FCR ternak.",
   alternates: {
-    canonical: "https://cocogum.com/produk/feed",
+    canonical: "https://cocogum.id/produk/feed",
   },
   openGraph: {
     title: "Cocogum FEED — Binder Pelet Pakan Akuatik & Unggas",
     description:
       "Tingkatkan water stability pelet pakan tambak Anda dengan perekat organik Cocogum FEED. Kurangi limbah amonia air dan cegah kerugian efisiensi FCR.",
-    url: "https://cocogum.com/produk/feed",
+    url: "https://cocogum.id/produk/feed",
   },
 };
 

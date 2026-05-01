@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Supplier perekat organik (binder) kelas ekspor untuk briket arang, pakan ikan & udang, dan coal fines. Bebas formaldehida. Pabrik di Bandung.",
   alternates: {
-    canonical: "https://cocogum.com",
+    canonical: "https://cocogum.id",
   },
   openGraph: {
     title: "Cocogum | Perekat Organik Briket, Pakan Ternak & Tambang — Kelas Ekspor",
     description:
       "Butuh perekat briket arang, binder pakan ikan/udang, atau coal fines binder? Cocogum hadir sebagai supplier organik binder terpercaya dari Bandung untuk pasar lokal & ekspor.",
-    url: "https://cocogum.com",
+    url: "https://cocogum.id",
   },
 };
 

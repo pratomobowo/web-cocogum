@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Hubungi tim Cocogum untuk konsultasi kebutuhan perekat organik (binder) briket arang ekspor, pakan ikan & udang, atau coal fines tambang batubara. Kantor di Baleendah, Kabupaten Bandung, Jawa Barat.",
   alternates: {
-    canonical: "https://cocogum.com/hubungi",
+    canonical: "https://cocogum.id/hubungi",
   },
   openGraph: {
     title: "Hubungi Cocogum — Konsultasi Perekat Organik Gratis",
     description:
       "Butuh binder organik untuk briket, pakan ternak, atau tambang? Hubungi Cocogum di Bandung — konsultasi, sampel gratis. Telepon & WhatsApp tersedia.",
-    url: "https://cocogum.com/hubungi",
+    url: "https://cocogum.id/hubungi",
   },
 };
 

@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Cocogum adalah perusahaan produsen perekat organik (organic binder) berbahan dasar batok kelapa dari Bandung. Didirikan untuk menggantikan binder sintetis berbahaya di industri briket, pakan ternak, dan tambang batubara Indonesia.",
   alternates: {
-    canonical: "https://cocogum.com/tentang",
+    canonical: "https://cocogum.id/tentang",
   },
   openGraph: {
     title: "Tentang Cocogum — Produsen Perekat Organik dari Bandung",
     description:
       "Kenali Cocogum: misi, visi, dan cara kami menghasilkan perekat organik kelas ekspor dari bahan alami batok kelapa untuk industri briket, pakan, dan tambang.",
-    url: "https://cocogum.com/tentang",
+    url: "https://cocogum.id/tentang",
   },
 };
 

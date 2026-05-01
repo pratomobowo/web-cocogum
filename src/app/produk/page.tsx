@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Spesifikasi lengkap produk perekat organik Cocogum: BRIQ untuk briket arang batok kelapa ekspor, COAL untuk coal fines tambang batubara, dan FEED untuk pelet pakan ikan & udang. 100% bebas formaldehida.",
   alternates: {
-    canonical: "https://cocogum.com/produk",
+    canonical: "https://cocogum.id/produk",
   },
   openGraph: {
     title: "Produk Perekat Organik Cocogum — BRIQ, COAL & FEED",
     description:
       "Temukan binder organik yang tepat untuk kebutuhan pabrik Anda: briket arang shisha, pakan ikan/udang, atau coal fines tambang. Spesifikasi teknis lengkap tersedia.",
-    url: "https://cocogum.com/produk",
+    url: "https://cocogum.id/produk",
   },
 };
 

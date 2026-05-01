@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Perekat industri organik (mosquito coil binder) untuk cetakan obat nyamuk bakar. 100% tanpa bau saat dibakar, menjamin nyala api stabil (smoldering) sepanjang malam.",
   alternates: {
-    canonical: "https://cocogum.com/produk/mosq",
+    canonical: "https://cocogum.id/produk/mosq",
   },
   openGraph: {
     title: "Cocogum MOSQ — Binder Pencetak Obat Nyamuk Bakar",
     description:
       "Tingkatkan durabilitas struktur melingkar obat nyamuk bakar pabrik Anda. Tidak patah saat dipisahkan, nyala stabil tanpa macet, bebas residu bau bacin.",
-    url: "https://cocogum.com/produk/mosq",
+    url: "https://cocogum.id/produk/mosq",
   },
 };
 

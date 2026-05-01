@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://cocogum.com",
+    url: "https://cocogum.id",
     siteName: "Cocogum Industrial",
     title: "Cocogum | Perekat Organik untuk Briket, Pakan Ternak & Tambang",
     description:
@@ -78,10 +78,10 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://cocogum.com/#organization",
+        "@id": "https://cocogum.id/#organization",
         "name": "Cocogum",
-        "url": "https://cocogum.com",
-        "logo": "https://cocogum.com/logo-cocogum.webp",
+        "url": "https://cocogum.id",
+        "logo": "https://cocogum.id/logo-cocogum.webp",
         "description": "Produsen perekat organik (organic binder) untuk industri briket arang batok kelapa, pakan ternak & akuakultur, serta penanganan coal fines tambang batubara.",
         "address": {
           "@type": "PostalAddress",
@@ -121,9 +121,9 @@ export default function RootLayout({
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://cocogum.com/#localbusiness",
+        "@id": "https://cocogum.id/#localbusiness",
         "name": "Cocogum",
-        "image": "https://cocogum.com/logo-cocogum.webp",
+        "image": "https://cocogum.id/logo-cocogum.webp",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Jl. Jaksanaranata No. 27, Baleendah",
@@ -134,7 +134,7 @@ export default function RootLayout({
         },
         "telephone": "+6285117261988",
         "email": "pelanginalfaabadi@gmail.com",
-        "url": "https://cocogum.com"
+        "url": "https://cocogum.id"
       }
     ]
   };

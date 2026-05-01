@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Perekat briket arang batok kelapa (organic binder) khusus ekspor. Pangkas waktu oven, pertahankan 95% fixed carbon, tanpa asap (smokeless), bebas formaldehida.",
   alternates: {
-    canonical: "https://cocogum.com/produk/briq",
+    canonical: "https://cocogum.id/produk/briq",
   },
   openGraph: {
     title: "Cocogum BRIQ — Binder Briket Arang Premium",
     description:
       "Solusi perekat organik (pengganti tapioka) untuk produksi briket arang shisha kualitas ekspor. Tanpa emisi gas beracun, ikatan ekstra kuat, dan tahan banting di logistik.",
-    url: "https://cocogum.com/produk/briq",
+    url: "https://cocogum.id/produk/briq",
   },
 };
 

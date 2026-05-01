@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Solusi binder organik untuk mencetak debu batubara (coal fines) menjadi briket berkalori tinggi. Anti-hancur, bebas racun B3, kalori terjaga mutlak.",
   alternates: {
-    canonical: "https://cocogum.com/produk/coal",
+    canonical: "https://cocogum.id/produk/coal",
   },
   openGraph: {
     title: "Cocogum COAL — Penyelamat Debu Batubara Anda",
     description:
       "Ubah limbah tambang batubara (coal fines) menjadi aset bernilai energi tinggi menggunakan binder organik ultra kuat dari Cocogum.",
-    url: "https://cocogum.com/produk/coal",
+    url: "https://cocogum.id/produk/coal",
   },
 };
 
