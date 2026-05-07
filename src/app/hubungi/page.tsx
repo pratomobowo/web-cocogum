@@ -146,14 +146,9 @@ export default function HubungiKami() {
                     </a>
                   </p>
                   
-                  <p className="text-on-surface-variant leading-relaxed mb-4">
-                    <strong className="text-primary font-bold">Ronal S</strong><br />
-                    <span className="text-sm">Business Development Manager</span>
-                  </p>
-                  
                   <p className="text-on-surface-variant leading-relaxed">
                     <strong className="text-primary font-bold">Sandy</strong><br />
-                    <span className="text-sm">R&D Manager</span>
+                    <span className="text-sm">Business Development Manager</span>
                   </p>
                 </div>
               </div>
