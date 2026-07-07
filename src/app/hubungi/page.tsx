@@ -115,10 +115,10 @@ export default function HubungiKami() {
                   </p>
                   
                   <p className="text-on-surface-variant leading-relaxed mb-4">
-                    <strong className="text-primary font-bold">Novy Larasati</strong><br />
+                    <strong className="text-primary font-bold">Silfia Novilia</strong><br />
                     <span className="text-sm">Sales Secretary Manager — Cocogum Bandung</span><br />
-                    <a href="tel:+6289694479028" className="hover:text-primary transition-colors">
-                      +62 896 9447 9028
+                    <a href="tel:+62895429411222" className="hover:text-primary transition-colors">
+                      +62 895 4294 11222
                     </a>
                   </p>
                   

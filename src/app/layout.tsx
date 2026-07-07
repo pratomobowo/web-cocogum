@@ -95,9 +95,9 @@ export default function RootLayout({
         "contactPoint": [
           {
             "@type": "ContactPoint",
-            "telephone": "+6289694479028",
+            "telephone": "+628****1222",
             "contactType": "customer service",
-            "name": "Novy Larasati — Sales Secretary Manager"
+            "name": "Silfia Novilia — Sales Secretary Manager"
           },
           {
             "@type": "ContactPoint",

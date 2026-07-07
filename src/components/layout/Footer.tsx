@@ -50,7 +50,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-4 mt-6">
             <a href="mailto:pelanginalfaabadi@gmail.com" title="pelanginalfaabadi@gmail.com" className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">mail</a>
-            <a href="tel:+6285933885" title="Novy Larasati" className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">call</a>
+            <a href="tel:+62895429411222" title="Silfia Novilia" className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">call</a>
             <a href="tel:+6285117261988" title="Krisna Jembawan" className="material-symbols-outlined text-white/60 hover:text-white cursor-pointer hover:scale-110 transition-transform">support_agent</a>
           </div>
         </div>
